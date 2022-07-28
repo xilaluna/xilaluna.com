@@ -7,5 +7,5 @@ body {
 }
 
 h1 {
-  @apply text-4xl sm:text-5xl;
+  @apply text-3xl sm:text-5xl;
 }
