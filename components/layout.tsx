@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 import Navbar from './navbar';
+import Footer from './footer';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <div className="md:container md:mx-auto">
       <Navbar />
       {children}
-      <h1>Footer</h1>
+      <Footer />
     </div>
   );
 };
