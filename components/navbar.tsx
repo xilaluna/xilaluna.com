@@ -1,38 +1,44 @@
 import Link from 'next/link';
+import { GitHub, Linkedin, Twitter, Sun } from 'react-feather';
 
 const Navbar = () => {
   return (
     <div>
       <div className="py-2" />
-      <div className="flex justify-between items-center py-2">
+      <div className="flex items-center justify-between py-2">
         <div className="w-full">
           <p>Status</p>
         </div>
-        <div className="w-full flex justify-center">
+        <div className="flex w-full justify-center">
           <h1>Xila Luna</h1>
         </div>
 
-        <ul className="w-full flex justify-end">
-          <li className="pr-1">LinkedIn</li>
-          <li className="px-1">GitHub</li>
-          <li className="pl-1">Twitter</li>
+        <ul className="flex w-full justify-end">
+          <li className="pr-1">
+            <Linkedin />
+          </li>
+          <li className="px-1">
+            <GitHub />
+          </li>
+          <li className="pl-1">
+            <Twitter />
+          </li>
         </ul>
       </div>
 
-      <div className="py-2" />
+      <div className="divider-y h-5" />
 
-      <ul className="w-full flex justify-center items-center border-y border-black py-1">
-        <li className="px-2">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li className="px-2">
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
-        </li>
-      </ul>
+      <div className="flex items-center justify-between space-x-3 py-5">
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+
+        <div className="divider" />
+
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+      </div>
     </div>
   );
 };
