@@ -1,45 +1,53 @@
 import Link from 'next/link';
-import { GitHub, Linkedin, Twitter, Sun } from 'react-feather';
+import {
+  Brain,
+  GithubLogo,
+  LinkedinLogo,
+  Moon,
+  Notebook,
+  TwitterLogo,
+} from 'phosphor-react';
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="py-2" />
-      <div className="flex items-center justify-between py-2">
-        <div className="w-full">
-          <p>Status</p>
+    <nav className="flex items-center justify-between py-5">
+      <Link href={'/'}>
+        <a className="text-lg font-bold">Xila Luna</a>
+      </Link>
+
+      <div className="flex items-center">
+        <div className="flex items-center space-x-3 pr-3">
+          <Link href={'/projects'}>
+            <a>
+              <Notebook className="h-5 w-5" />
+            </a>
+          </Link>
+          <Link href={'/skills'}>
+            <a href="">
+              <Brain className="h-5 w-5" />
+            </a>
+          </Link>
         </div>
-        <div className="flex w-full justify-center">
-          <h1>Xila Luna</h1>
+
+        <div className="flex items-center space-x-3 border-l border-neutral-600 pl-3 pr-3">
+          <a>
+            <GithubLogo className="h-5 w-5" />
+          </a>
+
+          <a>
+            <LinkedinLogo className="h-5 w-5" />
+          </a>
+
+          <a>
+            <TwitterLogo className="h-5 w-5" />
+          </a>
         </div>
 
-        <ul className="flex w-full justify-end">
-          <li className="pr-1">
-            <Linkedin />
-          </li>
-          <li className="px-1">
-            <GitHub />
-          </li>
-          <li className="pl-1">
-            <Twitter />
-          </li>
-        </ul>
+        <div className="flex items-center space-x-3 border-l border-neutral-600	 pl-3">
+          <Moon className="h-5 w-5" />
+        </div>
       </div>
-
-      <div className="divider-y h-5" />
-
-      <div className="flex items-center justify-between space-x-3 py-5">
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-
-        <div className="divider" />
-
-        <Link href="/projects">
-          <a>Projects</a>
-        </Link>
-      </div>
-    </div>
+    </nav>
   );
 };
 
