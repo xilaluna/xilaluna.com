@@ -4,7 +4,7 @@ import Footer from './footer';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="md:container md:mx-auto">
+    <div className="mx-auto max-w-screen-sm">
       <Navbar />
       {children}
       <Footer />
