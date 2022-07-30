@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-5">
       <Link href={'/'}>
-        <a className="text-lg font-bold">Xila Luna</a>
+        <a className="">Xila Luna</a>
       </Link>
 
       <div className="flex items-center">
@@ -30,11 +30,11 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-3 border-l border-neutral-600 pl-3 pr-3">
-          <a>
+          <a href="https://github.com/xilaluna">
             <GithubLogo className="h-5 w-5" />
           </a>
 
-          <a>
+          <a href="https://linkedin.com/in/xilaluna">
             <LinkedinLogo className="h-5 w-5" />
           </a>
 
