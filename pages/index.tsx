@@ -14,12 +14,12 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="flex flex-row items-center justify-between pt-10 pb-5">
-        <div className="">
+        <div className="relative h-60 w-60">
           <Image
             src={'/images/profile-picture.jpg'}
             alt="Profile Image"
-            width={280}
-            height={280}
+            layout="fill"
+            objectFit="cover"
             className="rounded-full"
           />
         </div>
@@ -43,16 +43,6 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </div>
-
-      <ul>
-        <li className="absolute -left-11 flex h-12 w-11 flex-col items-center justify-center p-0 pr-3">
-          <aside className="divider-y opacity-0"></aside>
-          <aside className="whitespace-nowrap py-1 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-            2022
-          </aside>
-          <aside className="divider-y"></aside>
-        </li>
-      </ul>
     </div>
   );
 };

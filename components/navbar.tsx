@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
 import {
   Brain,
   GithubLogo,
@@ -6,9 +8,41 @@ import {
   Moon,
   Notebook,
   TwitterLogo,
+  Sun,
 } from 'phosphor-react';
 
 const Navbar = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMount] = useState(false);
+
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
+  const handleThemeChange = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
+    if (currentTheme === 'dark') {
+      return (
+        <Sun
+          className="h-5 w-5"
+          role="button"
+          onClick={() => setTheme('light')}
+        />
+      );
+    } else {
+      return (
+        <Moon
+          className="h-5 w-5"
+          role="button"
+          onClick={() => setTheme('dark')}
+        />
+      );
+    }
+  };
+
   return (
     <nav className="flex items-center justify-between py-5">
       <Link href={'/'}>
@@ -44,7 +78,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-3 border-l border-neutral-600	 pl-3">
-          <Moon className="h-5 w-5" />
+          {handleThemeChange()}
         </div>
       </div>
     </nav>
