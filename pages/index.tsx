@@ -4,8 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'phosphor-react';
 
-import Timeline from '../components/timeline';
-
 const Home: NextPage = () => {
   return (
     <div>
@@ -46,7 +44,18 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* <Timeline /> */}
+      <div className="flex space-x-2">
+        <div className="flex flex-col items-center justify-center">
+          <span>2022</span>
+          <div className="border-color h-20 w-px border-l"></div>
+          <span>2021</span>
+        </div>
+        <div className="flex flex-col">
+          <div>
+            <p></p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
