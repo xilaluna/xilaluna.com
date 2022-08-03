@@ -21,9 +21,7 @@ const Navbar = () => {
 
   const handleThemeChange = () => {
     if (!mounted) return null;
-
     const currentTheme = theme === 'system' ? systemTheme : theme;
-
     if (currentTheme === 'dark') {
       return (
         <Sun
@@ -49,7 +47,7 @@ const Navbar = () => {
         <a className="">Xila Luna</a>
       </Link>
 
-      <div className="flex items-center">
+      <nav className="flex items-center">
         <div className="flex items-center space-x-3 pr-3">
           <Link href={'/projects'}>
             <a>
@@ -63,7 +61,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex items-center space-x-3 border-l border-neutral-600 pl-3 pr-3">
+        <div className="flex items-center space-x-3 border-l border-neutral-400 pl-3 pr-3 dark:border-neutral-600">
           <a href="https://github.com/xilaluna">
             <GithubLogo className="h-5 w-5" />
           </a>
@@ -77,10 +75,10 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="flex items-center space-x-3 border-l border-neutral-600	 pl-3">
+        <div className="flex items-center space-x-3 border-l border-neutral-400 pl-3 dark:border-neutral-600">
           {handleThemeChange()}
         </div>
-      </div>
+      </nav>
     </nav>
   );
 };
