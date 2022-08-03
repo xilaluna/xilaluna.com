@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'phosphor-react';
 
+import Timeline from '../components/timeline';
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -23,14 +25,14 @@ const Home: NextPage = () => {
             className="rounded-full"
           />
         </div>
-
         <div className="flex flex-1 flex-col items-center justify-center">
           <h1 className="pb-1 text-neutral-900 dark:text-neutral-50">
             Xila Luna
           </h1>
+
           <p>Full-Stack Engineer</p>
 
-          <div className="my-5 w-12 border-b border-neutral-400 dark:border-neutral-600" />
+          <div className="border-color my-5 w-12 border-b" />
 
           <p className="px-10 pb-1 text-justify">
             Xila Luna is a creative full-stack engineer who is willing and able
@@ -45,6 +47,8 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </div>
+
+      {/* <Timeline /> */}
     </div>
   );
 };

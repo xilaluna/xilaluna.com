@@ -10,9 +10,9 @@ const Copyright = () => {
 
 const Footer = () => {
   return (
-    <div className="flex items-center justify-center border-t border-neutral-400 py-5 dark:border-neutral-600">
+    <footer className="border-color flex items-center justify-center border-t py-5">
       <Copyright />
-    </div>
+    </footer>
   );
 };
 
