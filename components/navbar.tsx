@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import {
   Brain,
   GithubLogo,
   LinkedinLogo,
-  Moon,
-  Notebook,
+  MoonStars,
+  RocketLaunch,
   TwitterLogo,
   Sun,
 } from 'phosphor-react';
@@ -14,7 +15,9 @@ import {
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMount] = useState(false);
+  const router = useRouter();
 
+  console.log(router.pathname);
   useEffect(() => {
     setMount(true);
   }, []);
@@ -24,16 +27,16 @@ const Navbar = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
     if (currentTheme === 'dark') {
       return (
-        <Sun
-          className="h-5 w-5"
+        <MoonStars
+          className="icon-style"
           role="button"
           onClick={() => setTheme('light')}
         />
       );
     } else {
       return (
-        <Moon
-          className="h-5 w-5"
+        <Sun
+          className="icon-style"
           role="button"
           onClick={() => setTheme('dark')}
         />
@@ -44,38 +47,49 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-5">
       <Link href={'/'}>
-        <a className="">Xila Luna</a>
+        <a className="hover:text-neutral-900 dark:hover:text-neutral-50">
+          👋 Xila Luna
+        </a>
       </Link>
 
       <nav className="flex items-center">
         <div className="flex items-center space-x-3 pr-3">
           <Link href={'/projects'}>
-            <a>
-              <Notebook className="h-5 w-5" />
-            </a>
+            <RocketLaunch
+              className={`icon-style cursor-pointer ${
+                router.pathname === '/projects' ||
+                router.pathname === '/projects/[id]'
+                  ? 'text-neutral-900 dark:text-neutral-50'
+                  : ''
+              }`}
+            />
           </Link>
           <Link href={'/skills'}>
-            <a href="">
-              <Brain className="h-5 w-5" />
-            </a>
+            <Brain
+              className={`icon-style cursor-pointer ${
+                router.pathname === '/skills'
+                  ? 'text-neutral-900 dark:text-neutral-50'
+                  : ''
+              }`}
+            />
           </Link>
         </div>
 
-        <div className="flex items-center space-x-3 border-l border-neutral-400 pl-3 pr-3 dark:border-neutral-600">
+        <div className="border-color flex items-center space-x-3 border-l pl-3 pr-3">
           <a href="https://github.com/xilaluna">
-            <GithubLogo className="h-5 w-5" />
+            <GithubLogo className="icon-style" />
           </a>
 
           <a href="https://linkedin.com/in/xilaluna">
-            <LinkedinLogo className="h-5 w-5" />
+            <LinkedinLogo className="icon-style" />
           </a>
 
           <a>
-            <TwitterLogo className="h-5 w-5" />
+            <TwitterLogo className="icon-style" />
           </a>
         </div>
 
-        <div className="flex items-center space-x-3 border-l border-neutral-400 pl-3 dark:border-neutral-600">
+        <div className="border-color flex items-center space-x-3 border-l pl-3">
           {handleThemeChange()}
         </div>
       </nav>

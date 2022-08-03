@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-neutral-200	text-neutral-600	dark:bg-neutral-800 dark:text-neutral-400;
+@layer base {
+  body {
+    @apply bg-neutral-200	text-neutral-600	dark:bg-neutral-800 dark:text-neutral-400;
+  }
+  h1 {
+    @apply text-3xl sm:text-5xl;
+  }
 }
 
-h1 {
-  @apply text-3xl sm:text-5xl;
+@layer components {
+  .border-color {
+    @apply border-neutral-400 dark:border-neutral-600;
+  }
+  .icon-style {
+    @apply h-5 w-5 hover:text-neutral-900 dark:hover:text-neutral-50;
+  }
 }
