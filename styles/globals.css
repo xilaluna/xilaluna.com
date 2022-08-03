@@ -7,7 +7,7 @@
     @apply bg-neutral-200	text-neutral-600	dark:bg-neutral-800 dark:text-neutral-400;
   }
   h1 {
-    @apply text-3xl sm:text-5xl;
+    @apply text-3xl text-neutral-900 dark:text-neutral-50 sm:text-5xl;
   }
 }
 

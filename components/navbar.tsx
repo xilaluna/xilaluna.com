@@ -17,7 +17,6 @@ const Navbar = () => {
   const [mounted, setMount] = useState(false);
   const router = useRouter();
 
-  console.log(router.pathname);
   useEffect(() => {
     setMount(true);
   }, []);
@@ -45,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between py-5">
+    <header className="flex items-center justify-between py-5">
       <Link href={'/'}>
         <a className="hover:text-neutral-900 dark:hover:text-neutral-50">
           👋 Xila Luna
@@ -93,7 +92,7 @@ const Navbar = () => {
           {handleThemeChange()}
         </div>
       </nav>
-    </nav>
+    </header>
   );
 };
 

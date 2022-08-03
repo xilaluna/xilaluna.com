@@ -26,9 +26,7 @@ const Home: NextPage = () => {
           />
         </div>
         <div className="flex flex-1 flex-col items-center justify-center">
-          <h1 className="pb-1 text-neutral-900 dark:text-neutral-50">
-            Xila Luna
-          </h1>
+          <h1>Xila Luna</h1>
 
           <p>Full-Stack Engineer</p>
 
