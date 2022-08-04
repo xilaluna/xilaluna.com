@@ -9,6 +9,9 @@
   h1 {
     @apply text-3xl text-neutral-900 dark:text-neutral-50 sm:text-5xl;
   }
+  h3 {
+    @apply text-lg;
+  }
 }
 
 @layer components {
