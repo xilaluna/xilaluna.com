@@ -1,13 +1,17 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Heading from '../../components/heading';
 import projectData from '../../public/data/projects.json';
 
 const Projects: NextPage = () => {
   return (
-    <div>
-      <Heading title="Projects" subtitle="Collection of my work" />
+    <div className="flex flex-col space-y-10 py-10">
+      <div className="flex flex-col items-center justify-center space-y-5">
+        <h1>Projects</h1>
+        <p className="text-center">Collection of my work</p>
+        <div className="border-color w-12 border-b" />
+      </div>
+
       <div className="grid grid-cols-2 gap-5">
         {projectData.map((project) => {
           return (
