@@ -46,8 +46,14 @@ const Navbar = () => {
   return (
     <header className="flex items-center justify-between py-5">
       <Link href={'/'}>
-        <a className="hover:text-neutral-900 dark:hover:text-neutral-50">
-          👋 Xila Luna
+        <a
+          className={`hover:text-neutral-900 dark:hover:text-neutral-50 ${
+            router.pathname === '/'
+              ? 'text-neutral-900 dark:text-neutral-50'
+              : ''
+          }`}
+        >
+          Xila Luna
         </a>
       </Link>
 
