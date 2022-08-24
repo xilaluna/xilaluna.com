@@ -19,6 +19,9 @@
     @apply border-neutral-400 dark:border-neutral-600;
   }
   .icon-style {
-    @apply h-5 w-5 hover:text-neutral-900 dark:hover:text-neutral-50;
+    @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400;
+  }
+  .highlight-color {
+    @apply text-pink-400 dark:text-indigo-400;
   }
 }
