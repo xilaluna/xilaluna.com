@@ -21,11 +21,11 @@
   .icon-style {
     @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400;
   }
-  .highlight-color {
+  .active-link {
     @apply text-pink-400 dark:text-indigo-400;
   }
   .link-style {
-    @apply cursor-pointer text-pink-400 hover:underline dark:text-indigo-400;
+    @apply text-pink-400 hover:underline dark:text-indigo-400;
   }
   .button-style {
     @apply rounded-md bg-pink-400 px-2 py-1 text-neutral-200 hover:bg-pink-500 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-indigo-500;

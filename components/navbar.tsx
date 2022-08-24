@@ -57,7 +57,7 @@ const Navbar = () => {
               className={`icon-style cursor-pointer ${
                 router.pathname === '/projects' ||
                 router.pathname === '/projects/[id]'
-                  ? 'highlight-color'
+                  ? 'active-link'
                   : ''
               }`}
             />
@@ -65,7 +65,7 @@ const Navbar = () => {
           <Link href={'/skills'}>
             <Brain
               className={`icon-style cursor-pointer ${
-                router.pathname === '/skills' ? 'highlight-color' : ''
+                router.pathname === '/skills' ? 'active-link' : ''
               }`}
             />
           </Link>
