@@ -46,13 +46,7 @@ const Navbar = () => {
   return (
     <header className="flex items-center justify-between py-5">
       <Link href={'/'}>
-        <a
-          className={`hover:text-neutral-900 dark:hover:text-neutral-50 ${
-            router.pathname === '/'
-              ? 'text-neutral-900 dark:text-neutral-50'
-              : ''
-          }`}
-        >
+        <a className={`hover:text-pink-400 dark:hover:text-indigo-400 `}>
           Xila Luna
         </a>
       </Link>
@@ -64,7 +58,7 @@ const Navbar = () => {
               className={`icon-style cursor-pointer ${
                 router.pathname === '/projects' ||
                 router.pathname === '/projects/[id]'
-                  ? 'text-neutral-900 dark:text-neutral-50'
+                  ? 'highlight-color'
                   : ''
               }`}
             />
@@ -72,9 +66,7 @@ const Navbar = () => {
           <Link href={'/skills'}>
             <Brain
               className={`icon-style cursor-pointer ${
-                router.pathname === '/skills'
-                  ? 'text-neutral-900 dark:text-neutral-50'
-                  : ''
+                router.pathname === '/skills' ? 'highlight-color' : ''
               }`}
             />
           </Link>
