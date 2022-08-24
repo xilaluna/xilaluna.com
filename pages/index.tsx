@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { CaretRight } from 'phosphor-react';
 
 const Home: NextPage = () => {
   return (
@@ -29,15 +30,9 @@ const Home: NextPage = () => {
           find solutions when there are none.
         </p>
         <Link href={'/projects'}>
-          <div className="group cursor-pointer transition duration-200 ease-in-out hover:text-neutral-900 dark:hover:text-neutral-50">
-            My Projects{' '}
-            <span
-              aria-hidden="true"
-              className="inline-block translate-x-0 transition-transform duration-200 ease-in-out group-hover:translate-x-1"
-            >
-              →
-            </span>
-          </div>
+          <button className="rounded-md bg-pink-400 px-2 py-1 text-neutral-200 dark:bg-indigo-400 dark:text-neutral-800">
+            Projects <CaretRight className="mb-0.5 inline-block align-middle" />
+          </button>
         </Link>
         <div className="border-color w-12 border-b" />
       </div>
@@ -50,15 +45,8 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col space-y-4 pb-4">
             <p>
-              Developed the project{' '}
-              <span className="cursor-pointer text-teal-500 hover:underline dark:text-indigo-400">
-                LendA
-              </span>{' '}
-              as a part of the{' '}
-              <span className="relative cursor-pointer bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-[52px] after:origin-bottom-right after:scale-x-0 after:bg-gradient-to-r after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100">
-                Co.Lab
-              </span>{' '}
-              8 week program.
+              Developed the project LendA as a part of the Co.Lab 8 week
+              program.
             </p>
             <p>
               Graduated from Dominican University of California with a
@@ -73,9 +61,10 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col space-y-4 pb-4">
             <p>Graduated from Berkeley High School.</p>
-            <p>Complete Code Nation Pandora program.</p>
+            <p>Completed Code Nation Pandora program.</p>
             <p>
-              Participant of Google&apos;s Computer Science Summer Institute.
+              Participant of Google&apos;s Computer Science Summer Institute
+              (CSSI).
             </p>
           </div>
         </div>
@@ -87,10 +76,7 @@ const Home: NextPage = () => {
           <div className="flex flex-col space-y-4 pb-4">
             <p>
               Joined my High School&apos;s Robotics Club (
-              <span className="cursor-pointer text-indigo-400 hover:underline">
-                Team 5419 Berkelium
-              </span>
-              )
+              <span className="link-style">Team 5419 Berkelium</span>).
             </p>
           </div>
         </div>
