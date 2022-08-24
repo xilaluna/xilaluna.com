@@ -27,4 +27,7 @@
   .link-style {
     @apply cursor-pointer text-pink-400 hover:underline dark:text-indigo-400;
   }
+  .button-style {
+    @apply cursor-pointer text-pink-400 hover:bg-pink-400 dark:text-indigo-400;
+  }
 }
