@@ -24,4 +24,7 @@
   .highlight-color {
     @apply text-pink-400 dark:text-indigo-400;
   }
+  .link-style {
+    @apply cursor-pointer text-pink-400 hover:underline dark:text-indigo-400;
+  }
 }
