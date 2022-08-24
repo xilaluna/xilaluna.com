@@ -42,25 +42,66 @@ const Home: NextPage = () => {
         <div className="border-color w-12 border-b" />
       </div>
 
-      <div className="flex space-x-4">
-        <div className="flex flex-col items-center justify-center">
-          <span>2022</span>
-          <div className="border-color h-20 w-px border-l"></div>
-          <span>2021</span>
-          <div className="border-color h-4 w-px border-l"></div>
-          <span>2020</span>
-          <div className="border-color h-4 w-px border-l"></div>
+      <div className="flex flex-col">
+        <div className="flex space-x-4">
+          <div className="flex flex-col items-center justify-center">
+            <p>2022</p>
+            <div className="border-color h-full w-px border-l" />
+          </div>
+          <div className="flex flex-col space-y-4 pb-4">
+            <p>
+              Developed the project{' '}
+              <span className="cursor-pointer text-teal-500 hover:underline dark:text-indigo-400">
+                LendA
+              </span>{' '}
+              as a part of the{' '}
+              <span className="relative cursor-pointer bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-[52px] after:origin-bottom-right after:scale-x-0 after:bg-gradient-to-r after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100">
+                Co.Lab
+              </span>{' '}
+              8 week program.
+            </p>
+            <p>
+              Graduated from Dominican University of California with a
+              bachelor&apos;s degree in computer science.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col space-y-4">
-          <p>
-            Develop the project LendA as a part of the Co.Lab 8 week program.
-          </p>
-          <p>
-            Graduated from Dominican University of California with a
-            bachelor&apos;s degree in computer science.
-          </p>
-          <p>Work with a team to create BoringStocks</p>
-          <p>Graduate from Berkeley High School</p>
+        <div className="flex space-x-4">
+          <div className="flex flex-col items-center justify-center">
+            <p>2020</p>
+            <div className="border-color h-full w-px border-l" />
+          </div>
+          <div className="flex flex-col space-y-4 pb-4">
+            <p>Graduated from Berkeley High School.</p>
+            <p>Complete Code Nation Pandora program.</p>
+            <p>
+              Participant of Google&apos;s Computer Science Summer Institute.
+            </p>
+          </div>
+        </div>
+        <div className="flex space-x-4">
+          <div className="flex flex-col items-center justify-center">
+            <p>2019</p>
+            <div className="border-color h-full w-px border-l" />
+          </div>
+          <div className="flex flex-col space-y-4 pb-4">
+            <p>
+              Joined my High School&apos;s Robotics Club (
+              <span className="cursor-pointer text-indigo-400 hover:underline">
+                Team 5419 Berkelium
+              </span>
+              )
+            </p>
+          </div>
+        </div>
+        <div className="flex space-x-4">
+          <div className="flex flex-col items-center justify-center">
+            <p>2018</p>
+            <div className="border-color h-full w-px border-l" />
+          </div>
+          <div className="flex flex-col">
+            <p>Wrote my first line of code.</p>
+          </div>
         </div>
       </div>
     </div>
