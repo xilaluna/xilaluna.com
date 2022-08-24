@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           find solutions when there are none.
         </p>
         <Link href={'/projects'}>
-          <button className="rounded-md bg-pink-400 px-2 py-1 text-neutral-200 dark:bg-indigo-400 dark:text-neutral-800">
+          <button className="button-style">
             Projects <CaretRight className="mb-0.5 inline-block align-middle" />
           </button>
         </Link>
