@@ -10,6 +10,7 @@ import {
   RocketLaunch,
   TwitterLogo,
   Sun,
+  UserCircle,
 } from 'phosphor-react';
 
 const Navbar = () => {
@@ -44,11 +45,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex items-center justify-between py-5">
+    <header className="sticky top-0 z-10 flex items-center justify-between py-5 backdrop-blur-sm">
       <Link href={'/'}>
-        <a className={`hover:text-pink-400 dark:hover:text-indigo-400 `}>
-          Xila Luna
-        </a>
+        <UserCircle className="icon-style h-6 w-6 cursor-pointer" />
       </Link>
 
       <nav className="flex items-center">
