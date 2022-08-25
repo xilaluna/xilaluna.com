@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import projectData from '../../public/data/projects.json';
+import projectData from '../../data/projects.json';
 
 const Projects: NextPage = () => {
   return (
