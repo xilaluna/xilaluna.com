@@ -45,12 +45,18 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col space-y-4 pb-4">
             <p>
-              Developed the project LendA as a part of the Co.Lab 8 week
-              program.
+              Developed the project LendA as a part of the{' '}
+              <a href="https://www.joincolab.io/" className="link-style">
+                Co.Lab
+              </a>{' '}
+              8 week program.
             </p>
             <p>
-              Graduated from Dominican University of California with a
-              bachelor&apos;s degree in computer science.
+              Graduated from{' '}
+              <a className="link-style" href="https://www.dominican.edu/">
+                Dominican University of California
+              </a>{' '}
+              with a bachelor&apos;s degree in computer science.
             </p>
           </div>
         </div>
@@ -61,10 +67,22 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col space-y-4 pb-4">
             <p>Graduated from Berkeley High School.</p>
-            <p>Completed Code Nation Pandora program.</p>
             <p>
-              Participant of Google&apos;s Computer Science Summer Institute
-              (CSSI).
+              Completed{' '}
+              <a className="link-style" href="https://codenation.org/">
+                Code Nation
+              </a>{' '}
+              Pandora program.
+            </p>
+            <p>
+              Participant of{' '}
+              <a
+                className="link-style"
+                href="https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute"
+              >
+                Google&apos;s Computer Science Summer Institute
+              </a>
+              .
             </p>
           </div>
         </div>
@@ -76,7 +94,10 @@ const Home: NextPage = () => {
           <div className="flex flex-col space-y-4 pb-4">
             <p>
               Joined my High School&apos;s Robotics Club (
-              <span className="link-style">Team 5419 Berkelium</span>).
+              <a className="link-style" href="https://team5419.org/">
+                Team 5419 Berkelium
+              </a>
+              ).
             </p>
           </div>
         </div>
@@ -89,6 +110,34 @@ const Home: NextPage = () => {
             <p>Wrote my first line of code.</p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col items-center justify-center space-y-5">
+        <h2>My Favorite Tech Stack</h2>
+
+        <p>
+          <a className="link-style" href="https://nextjs.org/">
+            Next.js
+          </a>{' '}
+          |{' '}
+          <a className="link-style" href="https://www.typescriptlang.org/">
+            TypeScript
+          </a>{' '}
+          |{' '}
+          <a className="link-style" href="https://tailwindcss.com/">
+            Tailwind CSS
+          </a>{' '}
+          |{' '}
+          <a className="link-style" href="https://www.prisma.io/">
+            Prisma
+          </a>
+        </p>
+
+        <Link href={'/skills'}>
+          <button className="button-style ">
+            View my other skills{' '}
+            <CaretRight className="mb-0.5 inline-block align-middle" />
+          </button>
+        </Link>
       </div>
     </div>
   );
