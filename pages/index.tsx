@@ -29,12 +29,20 @@ const Home: NextPage = () => {
           Xila Luna is a creative full-stack engineer who is willing and able to
           find solutions when there are none.
         </p>
-        <Link href={'/projects'}>
-          <button className="button-style">
-            Projects <CaretRight className="mb-0.5 inline-block align-middle" />
-          </button>
-        </Link>
-        <div className="border-color w-12 border-b" />
+        <div className="space-x-2">
+          <Link href={'/projects'}>
+            <button className="button-style">
+              Projects
+              <CaretRight className="mb-0.5 inline-block align-middle" />
+            </button>
+          </Link>
+          <Link href={'/skills'}>
+            <button className="secondary-button-style">
+              Skills
+              <CaretRight className="mb-0.5 inline-block align-middle" />
+            </button>
+          </Link>
+        </div>
       </div>
 
       <div className="flex flex-col">
