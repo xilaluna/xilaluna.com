@@ -45,49 +45,47 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between py-5 backdrop-blur-sm">
-      <Link href={'/'}>
-        <UserCircle className="icon-style h-6 w-6 cursor-pointer" />
-      </Link>
-
-      <nav className="flex items-center">
-        <div className="flex items-center space-x-3 pr-3">
-          <Link href={'/projects'}>
-            <RocketLaunch
-              className={`icon-style cursor-pointer ${
-                router.pathname === '/projects' ||
-                router.pathname === '/projects/[id]'
-                  ? 'active-link'
-                  : ''
-              }`}
-            />
-          </Link>
-          <Link href={'/skills'}>
-            <Brain
-              className={`icon-style cursor-pointer ${
-                router.pathname === '/skills' ? 'active-link' : ''
-              }`}
-            />
+    <header className="sticky top-0 z-10 py-5 backdrop-blur-sm">
+      <nav className="mx-auto flex max-w-screen-sm items-center space-x-3">
+        <div className="grow">
+          <Link href={'/'}>
+            <UserCircle className="icon-style h-6 w-6 cursor-pointer" />
           </Link>
         </div>
 
-        <div className="border-color flex items-center space-x-3 border-l pl-3 pr-3">
-          <a href="https://github.com/xilaluna">
-            <GithubLogo className="icon-style" />
-          </a>
+        <Link href={'/projects'}>
+          <RocketLaunch
+            className={`icon-style cursor-pointer ${
+              router.pathname === '/projects' ||
+              router.pathname === '/projects/[id]'
+                ? 'active-link'
+                : ''
+            }`}
+          />
+        </Link>
+        <Link href={'/skills'}>
+          <Brain
+            className={`icon-style cursor-pointer ${
+              router.pathname === '/skills' ? 'active-link' : ''
+            }`}
+          />
+        </Link>
 
-          <a href="https://linkedin.com/in/xilaluna">
-            <LinkedinLogo className="icon-style" />
-          </a>
+        <div className="border-color h-5 border-l"></div>
 
-          <a>
-            <TwitterLogo className="icon-style" />
-          </a>
-        </div>
+        <a href="https://github.com/xilaluna">
+          <GithubLogo className="icon-style" />
+        </a>
+        <a href="https://linkedin.com/in/xilaluna">
+          <LinkedinLogo className="icon-style" />
+        </a>
+        <a>
+          <TwitterLogo className="icon-style" />
+        </a>
 
-        <div className="border-color flex items-center space-x-3 border-l pl-3">
-          {handleThemeChange()}
-        </div>
+        <div className="border-color h-5 border-l"></div>
+
+        {handleThemeChange()}
       </nav>
     </header>
   );
