@@ -1,6 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import path from 'path';
 import fs from 'fs';
+import { CaretRight, ArrowUpRight } from 'phosphor-react';
 
 interface linkInterface {
   name: string;
@@ -12,7 +15,7 @@ interface projectInterface {
   title: string;
   subtitle: string;
   description: string;
-  image: string;
+  images: string[];
   links: linkInterface[];
 }
 
@@ -51,8 +54,43 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Project = (props: { project: projectInterface }) => {
   return (
-    <div className="flex flex-col space-y-10 py-10">
-      <p>{props.project.title}</p>
+    <div className="flex flex-col space-y-5 py-10">
+      <div className="flex items-end justify-start space-x-1">
+        <Link href={'/projects'}>
+          <a className="link-style pb-px">Projects</a>
+        </Link>
+
+        <CaretRight className="mb-1 inline-block align-middle" />
+        <h1 className="text-2xl text-neutral-900 dark:text-neutral-50">
+          {props.project.title}
+        </h1>
+      </div>
+
+      <p className="text-justify">{props.project.description}</p>
+
+      <div className="flex space-x-2">
+        {props.project.links.map((link: linkInterface) => {
+          return (
+            <a href={link.link} key={link.name} className="button-style">
+              {link.name}{' '}
+              <ArrowUpRight className="mb-1 inline-block align-middle" />
+            </a>
+          );
+        })}
+      </div>
+      {props.project.images.map((image: string) => {
+        return (
+          <div className="aspect-w-16 aspect-h-9 w-full" key={image}>
+            <Image
+              src={`/images/${image}`}
+              alt={props.project.id}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
