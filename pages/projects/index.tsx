@@ -5,12 +5,13 @@ import projectData from '../../data/projects.json';
 
 const Projects: NextPage = () => {
   return (
-    <div className="flex flex-col space-y-10 py-10">
+    <div className="page-container">
       <div className="flex flex-col items-center justify-center space-y-5">
-        <h1>Projects</h1>
-        <p className="text-center">Collection of my work</p>
-        <div className="border-color w-12 border-b" />
+        <h1 className="main-heading">Projects</h1>
+        <p className="text-center">A collection of my work</p>
       </div>
+
+      <div className="border-divider" />
 
       <div className="grid grid-cols-2 gap-5">
         {projectData.map((project) => {
@@ -19,7 +20,7 @@ const Projects: NextPage = () => {
               <div className="flex w-full flex-col items-center space-y-2 pb-5 hover:cursor-pointer">
                 <div className="aspect-w-16 aspect-h-9 w-full">
                   <Image
-                    src={`/images/${project.image}`}
+                    src={`/images/${project.images[0]}`}
                     alt={project.title}
                     layout="fill"
                     objectFit="cover"
@@ -27,7 +28,7 @@ const Projects: NextPage = () => {
                   />
                 </div>
 
-                <h3>{project.title}</h3>
+                <h2 className="text-lg">{project.title}</h2>
                 <p className="text-center">{project.subtitle}</p>
               </div>
             </Link>
