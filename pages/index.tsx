@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CaretRight } from 'phosphor-react';
+import { CaretRight, HandWaving } from 'phosphor-react';
 
 const Home: NextPage = () => {
   return (
@@ -122,32 +122,13 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center space-y-5">
-        <h2>My Favorite Tech Stack</h2>
+        <h2>Get in Touch</h2>
 
-        <p>
-          <a className="link-style" href="https://nextjs.org/">
-            Next.js
-          </a>{' '}
-          |{' '}
-          <a className="link-style" href="https://www.typescriptlang.org/">
-            TypeScript
-          </a>{' '}
-          |{' '}
-          <a className="link-style" href="https://tailwindcss.com/">
-            Tailwind CSS
-          </a>{' '}
-          |{' '}
-          <a className="link-style" href="https://www.prisma.io/">
-            Prisma
-          </a>
-        </p>
+        <p>Message me and say hello.</p>
 
-        <Link href={'/skills'}>
-          <button className="button-style ">
-            View my other skills{' '}
-            <CaretRight className="mb-0.5 inline-block align-middle" />
-          </button>
-        </Link>
+        <button className="button-style">
+          Contact Me <HandWaving className="mb-0.5 inline-block align-middle" />
+        </button>
       </div>
     </div>
   );
