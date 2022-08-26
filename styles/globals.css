@@ -6,15 +6,15 @@
   body {
     @apply bg-neutral-200	text-neutral-600	dark:bg-neutral-800 dark:text-neutral-400;
   }
-  h1 {
-    @apply text-3xl text-neutral-900 dark:text-neutral-50 sm:text-5xl;
-  }
-  h3 {
-    @apply text-lg;
-  }
 }
 
 @layer components {
+  .page-container {
+    @apply flex flex-col space-y-10 py-10;
+  }
+  .main-heading {
+    @apply text-3xl text-neutral-900 dark:text-neutral-50 sm:text-5xl;
+  }
   .border-color {
     @apply border-neutral-400 dark:border-neutral-600;
   }
@@ -32,5 +32,8 @@
   }
   .secondary-button-style {
     @apply rounded-md border border-pink-400 px-2 py-1 text-pink-400 hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
+  }
+  .border-divider {
+    @apply border-color w-20 self-center border-b;
   }
 }
