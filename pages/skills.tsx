@@ -10,7 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import colors from 'tailwindcss/colors';
+import { useTheme } from 'next-themes';
 import skillsData from '../data/skills.json';
 
 ChartJS.register(
@@ -30,9 +30,17 @@ const options = {
       display: false,
     },
   },
+  scales: {
+    y: {
+      max: 100,
+    },
+  },
 };
 
 const Skills: NextPage = () => {
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
   return (
     <div className="page-container">
       <div className="flex flex-col items-center justify-center space-y-5">
@@ -40,10 +48,11 @@ const Skills: NextPage = () => {
         <p className="text-center">A list of my skills</p>
       </div>
       <div className="border-divider" />
-      <div className="grid grid-cols-2 gap-2">
+      <div className="space-y-20">
         {skillsData.map((group) => {
           return (
             <div key={group.name}>
+              <h2 className="pb-2 text-center text-lg">{group.name}</h2>
               <Bar
                 data={{
                   labels: group.skills.map((skill) => skill.skill),
@@ -51,7 +60,15 @@ const Skills: NextPage = () => {
                     {
                       label: 'Level',
                       data: group.skills.map((skill) => skill.level),
-                      backgroundColor: colors.indigo[400],
+                      backgroundColor:
+                        currentTheme === 'dark'
+                          ? 'rgb(99 102 241 / 0.5)'
+                          : 'rgb(244 114 182 / 0.5)',
+                      borderColor:
+                        currentTheme === 'dark'
+                          ? 'rgb(99 102 241)'
+                          : 'rgb(244 114 182)',
+                      borderWidth: 2,
                     },
                   ],
                 }}
