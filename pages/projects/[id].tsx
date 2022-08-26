@@ -54,7 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Project = (props: { project: projectInterface }) => {
   return (
-    <div className="flex flex-col space-y-5 py-10">
+    <div className="page-container space-y-5">
       <div className="flex items-end justify-start space-x-1">
         <Link href={'/projects'}>
           <a className="link-style pb-px">Projects</a>
