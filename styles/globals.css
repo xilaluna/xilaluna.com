@@ -10,7 +10,7 @@
 
 @layer components {
   .page-container {
-    @apply flex flex-col space-y-10 py-10;
+    @apply mx-auto flex max-w-screen-sm flex-col space-y-10 py-10;
   }
   .main-heading {
     @apply text-3xl text-neutral-900 dark:text-neutral-50 sm:text-5xl;
