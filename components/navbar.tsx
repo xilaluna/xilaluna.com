@@ -8,7 +8,7 @@ import {
   LinkedinLogo,
   MoonStars,
   RocketLaunch,
-  TwitterLogo,
+  PaperPlaneTilt,
   Sun,
   UserCircle,
 } from 'phosphor-react';
@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 py-5 backdrop-blur-sm">
+    <header className="sticky top-0 z-10 py-5 px-4 backdrop-blur-md sm:px-0">
       <nav className="mx-auto flex max-w-screen-sm items-center space-x-3">
         <div className="grow">
           <Link href={'/'}>
@@ -79,8 +79,8 @@ const Navbar = () => {
         <a href="https://linkedin.com/in/xilaluna">
           <LinkedinLogo className="icon-style" />
         </a>
-        <a>
-          <TwitterLogo className="icon-style" />
+        <a href="mailto:xilaluna1@gmail.com">
+          <PaperPlaneTilt className="icon-style" />
         </a>
 
         <div className="border-color h-5 border-l"></div>
