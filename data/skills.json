@@ -43,13 +43,5 @@
       { "skill": "Docker", "level": 85 },
       { "skill": "DigitalOcean", "level": 78 }
     ]
-  },
-  {
-    "name": "Testing",
-    "skills": [
-      { "skill": "Mocha & Chai", "level": 80 },
-      { "skill": "Unit / Integration", "level": 67 },
-      { "skill": "OpSec Testing & Hardening", "level": 64 }
-    ]
   }
 ]
