@@ -23,9 +23,8 @@ const Home: NextPage = () => {
             className="rounded-full"
           />
         </div>
-
         <h1 className="main-heading">Xila Luna</h1>
-        <p className="px-24 text-center">
+        <p className="px-2 text-center sm:px-24">
           Xila Luna is a creative full-stack engineer who is willing and able to
           find solutions when there are none.
         </p>
@@ -45,15 +44,14 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="border-divider" />
-
       <div className="flex flex-col">
-        <div className="flex space-x-4">
+        <h2 className="sub-heading pb-5 text-center">Timeline</h2>
+        <div className="flex space-x-2 sm:space-x-4">
           <div className="flex flex-col items-center justify-center">
             <p>2022</p>
             <div className="border-color h-full w-px border-l" />
           </div>
-          <div className="flex flex-col space-y-4 pb-4">
+          <div className="flex flex-col space-y-5 pb-5">
             <p>
               Developed the project LendA as a part of the{' '}
               <a href="https://www.joincolab.io/" className="link-style">
@@ -70,12 +68,12 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex space-x-2 sm:space-x-4">
           <div className="flex flex-col items-center justify-center">
             <p>2020</p>
             <div className="border-color h-full w-px border-l" />
           </div>
-          <div className="flex flex-col space-y-4 pb-4">
+          <div className="flex flex-col space-y-5 pb-5">
             <p>Graduated from Berkeley High School.</p>
             <p>
               Completed{' '}
@@ -96,12 +94,12 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex space-x-2 sm:space-x-4">
           <div className="flex flex-col items-center justify-center">
             <p>2019</p>
             <div className="border-color h-full w-px border-l" />
           </div>
-          <div className="flex flex-col space-y-4 pb-4">
+          <div className="flex flex-col space-y-5 pb-5">
             <p>
               Joined my High School&apos;s Robotics Club{' '}
               <a className="link-style" href="https://team5419.org/">
@@ -111,7 +109,7 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex space-x-2 sm:space-x-4">
           <div className="flex flex-col items-center justify-center">
             <p>2018</p>
             <div className="border-color h-full w-px border-l" />
@@ -122,13 +120,13 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center space-y-5">
-        <h2>Get in Touch</h2>
+        <h2 className="sub-heading">Get in Touch</h2>
 
         <p>Message me and say hello.</p>
 
-        <button className="button-style">
+        <a href="mailto:xilaluna1@gmail.com" className="button-style">
           Contact Me <HandWaving className="mb-0.5 inline-block align-middle" />
-        </button>
+        </a>
       </div>
     </div>
   );
