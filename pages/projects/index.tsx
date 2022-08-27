@@ -13,7 +13,7 @@ const Projects: NextPage = () => {
 
       <div className="border-divider" />
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
         {projectData.map((project) => {
           return (
             <Link href={`/projects/${project.id}`} key={project.id}>
@@ -28,8 +28,10 @@ const Projects: NextPage = () => {
                   />
                 </div>
 
-                <h2 className="text-lg">{project.title}</h2>
-                <p className="text-center">{project.subtitle}</p>
+                <h2 className="heading-color pt-2 text-xl">{project.title}</h2>
+                <p className="text-center sm:text-justify">
+                  {project.subtitle}
+                </p>
               </div>
             </Link>
           );

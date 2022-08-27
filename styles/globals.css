@@ -10,10 +10,16 @@
 
 @layer components {
   .page-container {
-    @apply mx-auto flex max-w-screen-sm flex-col space-y-10 py-10;
+    @apply mx-auto flex max-w-screen-sm flex-col space-y-20 py-20 px-4 sm:px-0;
+  }
+  .heading-color {
+    @apply text-neutral-900 dark:text-neutral-50;
   }
   .main-heading {
-    @apply text-3xl text-neutral-900 dark:text-neutral-50 sm:text-5xl;
+    @apply heading-color text-4xl font-semibold sm:text-5xl;
+  }
+  .sub-heading {
+    @apply heading-color text-2xl;
   }
   .border-color {
     @apply border-neutral-400 dark:border-neutral-600;
