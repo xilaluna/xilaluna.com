@@ -4,19 +4,19 @@
 
 @layer base {
   body {
-    @apply bg-neutral-200	text-neutral-600	dark:bg-neutral-800 dark:text-neutral-400;
+    @apply bg-neutral-200	tracking-wide	text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
   }
 }
 
 @layer components {
   .page-container {
-    @apply mx-auto flex max-w-screen-sm flex-col space-y-20 py-20 px-4 sm:px-0;
+    @apply mx-auto flex max-w-screen-sm flex-col space-y-28 py-20 px-4 sm:px-0;
   }
   .heading-color {
     @apply text-neutral-900 dark:text-neutral-50;
   }
   .main-heading {
-    @apply heading-color text-4xl font-semibold sm:text-5xl;
+    @apply heading-color text-4xl font-semibold sm:text-6xl;
   }
   .sub-heading {
     @apply heading-color text-2xl;
@@ -34,10 +34,10 @@
     @apply text-pink-400 hover:underline dark:text-indigo-400;
   }
   .button-style {
-    @apply rounded-md bg-pink-400 px-2 py-1 text-neutral-200 hover:bg-pink-500 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-indigo-500;
+    @apply rounded-md bg-pink-400 px-2 py-1 text-neutral-200 transition duration-300 ease-in-out hover:bg-pink-500 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-indigo-500;
   }
   .secondary-button-style {
-    @apply rounded-md border border-pink-400 px-2 py-1 text-pink-400 hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
+    @apply rounded-md border border-pink-400 px-2 py-1 text-pink-400 transition duration-300 ease-in-out hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
   }
   .border-divider {
     @apply border-color w-20 self-center border-b;
