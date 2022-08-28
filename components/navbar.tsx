@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 py-2 px-4 backdrop-blur-md sm:py-5 sm:px-0">
+    <header className="sticky top-0 z-10 py-5 px-4 backdrop-blur-md sm:py-5 sm:px-0">
       <nav className="mx-auto flex max-w-screen-sm items-center space-x-3">
         <div className="grow">
           <Link href={'/'}>
