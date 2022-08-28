@@ -5,13 +5,11 @@ import projectData from '../../data/projects.json';
 
 const Projects: NextPage = () => {
   return (
-    <div className="page-container">
+    <div className="page-container ">
       <div className="flex flex-col items-center justify-center space-y-5">
         <h1 className="main-heading">Projects</h1>
         <p className="text-center">A collection of my work</p>
       </div>
-
-      <div className="border-divider" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
         {projectData.map((project) => {
