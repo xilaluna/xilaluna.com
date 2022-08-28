@@ -47,7 +47,6 @@ const Skills: NextPage = () => {
         <h1 className="main-heading">Skills</h1>
         <p className="text-center">A list of my skills</p>
       </div>
-      <div className="border-divider" />
       <div className="space-y-20">
         {skillsData.map((group) => {
           return (
