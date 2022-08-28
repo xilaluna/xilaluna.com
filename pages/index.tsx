@@ -6,40 +6,42 @@ import { CaretRight, HandWaving } from 'phosphor-react';
 const Home: NextPage = () => {
   return (
     <div className="page-container">
-      <div className="flex flex-col items-center justify-center space-y-5">
-        <div className="relative h-56 w-56">
-          <Image
-            src={'/images/profile-picture.jpg'}
-            alt="Profile Image"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-full"
-          />
+      <section className="flex flex-col items-center justify-center space-y-5 sm:flex-row sm:justify-between sm:space-y-0">
+        <div className="sm:order-last sm:pl-5">
+          <div className="relative h-52 w-52 sm:h-64 sm:w-64 ">
+            <Image
+              src={'/images/profile-picture.jpg'}
+              alt="Profile Image"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full"
+            />
+          </div>
         </div>
-        <h1 className="main-heading">Xila Luna</h1>
-        <p className="px-2 text-center sm:px-24">
-          Xila Luna is a creative full-stack engineer who is willing and able to
-          find solutions when there are none.
-        </p>
-
-        <div className="flex space-x-2">
-          <Link href={'/projects'}>
-            <button className="button-style">
-              Projects
-              <CaretRight className="mb-0.5 inline-block align-middle" />
-            </button>
-          </Link>
-          <Link href={'/skills'}>
-            <button className="secondary-button-style">
-              Skills
-              <CaretRight className="mb-0.5 inline-block align-middle" />
-            </button>
-          </Link>
+        <div className="flex flex-col items-center justify-center space-y-5 sm:items-start">
+          <h1 className="main-heading">Xila Luna</h1>
+          <p className="px-2 text-center tracking-wide sm:px-0 sm:text-left">
+            Xila Luna is a creative full-stack engineer who is willing and able
+            to find solutions when there are none.
+          </p>
+          <div className="flex space-x-3 sm:pt-5">
+            <Link href={'/projects'}>
+              <button className="button-style">
+                Projects
+                <CaretRight className="mb-0.5 inline-block align-middle" />
+              </button>
+            </Link>
+            <Link href={'/skills'}>
+              <button className="secondary-button-style">
+                Skills
+                <CaretRight className="mb-0.5 inline-block align-middle" />
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-col">
-        <h2 className="sub-heading pb-5 text-center">Timeline</h2>
+      <section className="flex flex-col">
         <div className="flex space-x-2 sm:space-x-4">
           <div className="flex flex-col items-center justify-center">
             <p>2022</p>
@@ -112,16 +114,18 @@ const Home: NextPage = () => {
             <p>Wrote my first line of code.</p>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col items-center justify-center space-y-5">
+      </section>
+
+      <section className="flex flex-col items-center justify-center space-y-5">
         <h2 className="sub-heading">Get in Touch</h2>
 
         <p>Message me and say hello.</p>
 
         <a href="mailto:xilaluna1@gmail.com" className="button-style">
-          Contact Me <HandWaving className="mb-0.5 inline-block align-middle" />
+          Contact Me{' '}
+          <HandWaving className="mb-0.5 inline-block h-6 w-6 align-middle" />
         </a>
-      </div>
+      </section>
     </div>
   );
 };
