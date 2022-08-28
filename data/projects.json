@@ -9,6 +9,7 @@
       "boringstocks/boringstocks-live.png"
     ],
     "links": [
+      { "name": "Website", "link": "https://boringstocks.live" },
       {
         "name": "GitHub",
         "link": "https://github.com/BoringStocks/BoringStocks"
@@ -16,8 +17,27 @@
       {
         "name": "Product Hunt",
         "link": "https://www.producthunt.com/posts/boringstocks?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-boringstocks"
+      }
+    ]
+  },
+  {
+    "id": "fentscraper",
+    "title": "Fentanyl Epidemic Scraper",
+    "subtitle": "A Go scraper that pulls fentanyl articles to follow the fentanyl epidemic trend",
+    "description": "The mission for this project was to create a scraper that would pull articles pertaining to fentanyl, for the goal of mapping the trend of the fentanyl epidemic & the increase of fentanyl distribution through illegal sites.",
+    "images": [
+      "fentscraper/fentscraper.png",
+      "fentscraper/fentscraper-live.png"
+    ],
+    "links": [
+      {
+        "name": "Website",
+        "link": "https://xilaluna.github.io/Fentanyl-Epidemic-Scraper/"
       },
-      { "name": "Website", "link": "https://boringstocks.live" }
+      {
+        "name": "GitHub",
+        "link": "https://github.com/xilaluna/Fentanyl-Epidemic-Scraper"
+      }
     ]
   },
   {
