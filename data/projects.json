@@ -24,7 +24,7 @@
     "id": "fentscraper",
     "title": "Fentanyl Epidemic Scraper",
     "subtitle": "A Go scraper that pulls fentanyl articles to follow the fentanyl epidemic trend",
-    "description": "The mission for this project was to create a scraper that would pull articles pertaining to fentanyl, for the goal of mapping the trend of the fentanyl epidemic & the increase of fentanyl distribution through illegal sites.",
+    "description": "My mission for this project was to create a scraper that identifies articles relating to fentanyl as a means to map the trend of the fentanyl epidemic, specifically its distribution from illegal websites.",
     "images": [
       "fentscraper/fentscraper.png",
       "fentscraper/fentscraper-live.png"
