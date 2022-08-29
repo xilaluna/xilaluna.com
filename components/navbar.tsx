@@ -16,10 +16,20 @@ import {
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMount] = useState(false);
+  const [navStyles, setNavStyles] = useState(false);
+
   const router = useRouter();
 
   useEffect(() => {
     setMount(true);
+    const handleNavStyles = () => {
+      if (window.scrollY > 80) {
+        setNavStyles(true);
+      } else {
+        setNavStyles(false);
+      }
+    };
+    window.addEventListener('scroll', handleNavStyles);
   }, []);
 
   const handleThemeChange = () => {
@@ -45,8 +55,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 py-2 px-4 backdrop-blur-md sm:py-5 sm:px-0">
-      <nav className="mx-auto flex max-w-screen-sm items-center space-x-3">
+    <header className="sticky top-0 z-10 backdrop-blur-md ">
+      <nav
+        className={`mx-auto flex max-w-screen-sm items-center space-x-3 py-3 px-4 sm:py-5 sm:px-0 ${
+          navStyles ? 'border-color border-b' : ''
+        }`}
+      >
         <div className="grow">
           <Link href={'/'}>
             <UserCircle className="icon-style h-6 w-6 cursor-pointer" />
