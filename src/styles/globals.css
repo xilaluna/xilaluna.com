@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-neutral-200	tracking-wide	text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
+    @apply bg-neutral-100 font-dmmono text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
   }
 }
 
 @layer components {
+  .dim-text {
+    @apply text-neutral-400 dark:text-neutral-600;
+  }
   .page-container {
     @apply mx-auto flex max-w-screen-sm flex-col space-y-28 py-20 px-4 sm:px-0;
   }
@@ -25,7 +30,7 @@
     @apply border-neutral-400 dark:border-neutral-600;
   }
   .icon-style {
-    @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400;
+    @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400 sm:h-6 sm:w-6;
   }
   .active-link {
     @apply text-pink-400 dark:text-indigo-400;

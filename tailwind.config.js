@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {},
+    fontFamily: {
+      dmmono: ['DM Mono', 'monospace'],
+    },
   },
   corePlugins: {
     aspectRatio: false,
