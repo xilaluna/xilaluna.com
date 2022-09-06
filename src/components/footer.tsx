@@ -8,7 +8,7 @@ const Copyright = () => {
   );
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="border-color mx-auto flex max-w-screen-sm items-center justify-center border-t py-3 sm:py-5">
       <Copyright />
