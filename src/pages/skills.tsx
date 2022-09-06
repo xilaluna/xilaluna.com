@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from 'next-themes';
-import skillsData from '../../data/skills.json';
+import skillsData from '../../public/data/skills.json';
 
 ChartJS.register(
   CategoryScale,
