@@ -4,13 +4,12 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import {
   Brain,
-  GithubLogo,
-  LinkedinLogo,
   MoonStars,
   RocketLaunch,
   PaperPlaneTilt,
   Sun,
-  UserCircle,
+  House,
+  Link as LinkIcon,
 } from 'phosphor-react';
 
 const Navbar = () => {
@@ -55,18 +54,19 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 backdrop-blur-md ">
+    <header className="fixed top-0 z-10 w-full backdrop-blur-md ">
       <nav
-        className={`mx-auto flex max-w-screen-sm items-center space-x-3 py-3 px-4 sm:py-5 sm:px-0 ${
+        className={`mx-auto flex max-w-screen-sm items-center justify-between space-x-3 py-3 px-4 sm:py-5 sm:px-0 ${
           navStyles ? 'border-color border-b' : ''
         }`}
       >
-        <div className="grow">
-          <Link href={'/'}>
-            <UserCircle className="icon-style h-6 w-6 cursor-pointer" />
-          </Link>
-        </div>
-
+        <Link href={'/'}>
+          <House
+            className={`icon-style cursor-pointer ${
+              router.pathname === '/' ? 'active-link' : ''
+            }`}
+          />
+        </Link>
         <Link href={'/projects'}>
           <RocketLaunch
             className={`icon-style cursor-pointer ${
@@ -84,20 +84,13 @@ const Navbar = () => {
             }`}
           />
         </Link>
+        <Link href={'/links'}>
+          <LinkIcon className="icon-style" />
+        </Link>
 
-        <div className="border-color h-5 border-l"></div>
-
-        <a href="https://github.com/xilaluna">
-          <GithubLogo className="icon-style" />
-        </a>
-        <a href="https://linkedin.com/in/xilaluna">
-          <LinkedinLogo className="icon-style" />
-        </a>
         <a href="mailto:xilaluna1@gmail.com">
           <PaperPlaneTilt className="icon-style" />
         </a>
-
-        <div className="border-color h-5 border-l"></div>
 
         {handleThemeChange()}
       </nav>
