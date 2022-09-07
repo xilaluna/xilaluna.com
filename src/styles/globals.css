@@ -11,14 +11,21 @@
 }
 
 @layer components {
-  .dim-text {
+  .highlight {
+    @apply text-pink-400 transition duration-300 ease-in-out dark:text-indigo-400;
+  }
+  .sub-color {
     @apply text-neutral-400 dark:text-neutral-600;
   }
-  .page-container {
-    @apply mx-auto flex max-w-screen-sm flex-col space-y-28 py-20 px-4 sm:px-0;
+  .border-color {
+    @apply border-neutral-400 dark:border-neutral-600;
   }
   .heading-color {
     @apply text-neutral-900 dark:text-neutral-50;
+  }
+
+  .page-container {
+    @apply mx-auto flex max-w-screen-sm flex-col space-y-28 py-20 px-4 sm:px-0;
   }
   .main-heading {
     @apply heading-color text-4xl font-semibold sm:text-6xl;
@@ -26,25 +33,17 @@
   .sub-heading {
     @apply heading-color text-2xl;
   }
-  .border-color {
-    @apply border-neutral-400 dark:border-neutral-600;
-  }
   .icon-style {
     @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400 sm:h-6 sm:w-6;
   }
-  .active-link {
-    @apply text-pink-400 dark:text-indigo-400;
-  }
   .link-style {
-    @apply text-pink-400 hover:underline dark:text-indigo-400;
+    @apply highlight hover:underline;
   }
-  .button-style {
-    @apply rounded-md bg-pink-400 px-2 py-1 text-neutral-200 transition duration-300 ease-in-out hover:bg-pink-500 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-indigo-500;
+
+  .btn {
+    @apply rounded-md bg-pink-400 px-4 py-2 text-neutral-200 transition duration-300 ease-in-out hover:bg-neutral-900 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-neutral-100;
   }
-  .secondary-button-style {
-    @apply rounded-md border border-pink-400 px-2 py-1 text-pink-400 transition duration-300 ease-in-out hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
-  }
-  .border-divider {
-    @apply border-color w-20 self-center border-b;
+  .secondary-btn {
+    @apply rounded-md border border-pink-400 px-4 py-2 text-pink-400 transition duration-300 ease-in-out hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
   }
 }

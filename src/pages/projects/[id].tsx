@@ -71,7 +71,7 @@ const Project = (props: { project: projectInterface }) => {
       <div className="flex space-x-2">
         {props.project.links.map((link: linkInterface) => {
           return (
-            <a href={link.link} key={link.name} className="button-style">
+            <a href={link.link} key={link.name} className="btn">
               {link.name}{' '}
               <ArrowUpRight className="mb-1 inline-block align-middle" />
             </a>

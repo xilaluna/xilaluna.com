@@ -21,13 +21,13 @@ const Hero: React.FC = () => {
       </p>
       <div className="flex space-x-3 pt-3 sm:pt-5">
         <Link href={'/projects'}>
-          <button className="button-style">
+          <button className="btn">
             Projects
             <CaretRight className="mb-0.5 inline-block align-middle" />
           </button>
         </Link>
         <Link href={'/skills'}>
-          <button className="secondary-button-style">
+          <button className="secondary-btn">
             Skills
             <CaretRight className="mb-0.5 inline-block align-middle" />
           </button>
