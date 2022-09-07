@@ -42,18 +42,15 @@ const Skills: NextPage = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <main className="mx-auto flex max-w-screen-sm flex-col space-y-20 px-4 py-40 sm:px-0">
+    <main className="container space-y-10 py-20">
       <div className="flex flex-col items-center justify-center space-y-5">
         <h1 className="main-heading">Skills</h1>
         <p className="text-center">A list of my skills</p>
       </div>
-      <div className="space-y-20">
+      <div className="space-y-5">
         {skillsData.map((group) => {
           return (
-            <div
-              className="border-color rounded-md border p-2"
-              key={group.name}
-            >
+            <div key={group.name}>
               <h2 className="pb-2 text-center text-lg">{group.name}</h2>
               <Bar
                 data={{

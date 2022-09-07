@@ -54,9 +54,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 z-10 w-full backdrop-blur-md ">
+    <header className="sticky top-0 z-10 backdrop-blur-md ">
       <nav
-        className={`mx-auto flex max-w-screen-sm items-center justify-between space-x-3 py-3 px-4 sm:py-5 sm:px-0 ${
+        className={`container flex items-center justify-between space-x-3 py-3 sm:py-5 ${
           navStyles ? 'border-color border-b' : ''
         }`}
       >
