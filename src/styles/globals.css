@@ -41,7 +41,7 @@
     @apply mx-auto max-w-screen-sm px-4 sm:px-0;
   }
   .secondary-page {
-    @apply container space-y-5 py-10 sm:space-y-10 sm:py-20;
+    @apply container space-y-8 py-10 sm:space-y-10 sm:py-20;
   }
   .btn {
     @apply rounded-md bg-pink-400 px-4 py-2 text-center text-neutral-200 transition duration-300 ease-in-out hover:bg-neutral-900 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-neutral-100;

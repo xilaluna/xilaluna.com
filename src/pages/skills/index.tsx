@@ -12,6 +12,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from 'next-themes';
 import skillsData from '../../../public/data/skills.json';
+import Heading from '@/components/Heading';
 
 ChartJS.register(
   CategoryScale,
@@ -43,10 +44,7 @@ const Skills: NextPage = () => {
 
   return (
     <main className="secondary-page">
-      <div className="flex flex-col items-center justify-center space-y-5">
-        <h1 className="main-heading">Skills</h1>
-        <p className="text-center">A list of my skills</p>
-      </div>
+      <Heading title="Skills" subtitle="A list of my skills" />
       <div className="space-y-5">
         {skillsData.map((group) => {
           return (

@@ -8,14 +8,12 @@ import {
   StackOverflowLogo,
   Coffee,
 } from 'phosphor-react';
+import Heading from '@/components/Heading';
 
 const Links: NextPage = () => {
   return (
     <main className="secondary-page">
-      <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
-        <h1 className="main-heading">Links</h1>
-        <p className="text-center">@xilaluna</p>
-      </div>
+      <Heading title="Links" subtitle="@xilaluna" />
 
       <div className="flex flex-col items-center justify-center space-y-5">
         <Link href={'/'}>
