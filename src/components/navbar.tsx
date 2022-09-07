@@ -63,7 +63,7 @@ const Navbar = () => {
         <Link href={'/'}>
           <House
             className={`icon-style cursor-pointer ${
-              router.pathname === '/' ? 'active-link' : ''
+              router.pathname === '/' ? 'highlight' : ''
             }`}
           />
         </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
             className={`icon-style cursor-pointer ${
               router.pathname === '/projects' ||
               router.pathname === '/projects/[id]'
-                ? 'active-link'
+                ? 'highlight'
                 : ''
             }`}
           />
@@ -80,12 +80,16 @@ const Navbar = () => {
         <Link href={'/skills'}>
           <Brain
             className={`icon-style cursor-pointer ${
-              router.pathname === '/skills' ? 'active-link' : ''
+              router.pathname === '/skills' ? 'highlight' : ''
             }`}
           />
         </Link>
         <Link href={'/links'}>
-          <LinkIcon className="icon-style" />
+          <LinkIcon
+            className={`icon-style cursor-pointer ${
+              router.pathname === '/links' ? 'highlight' : ''
+            }`}
+          />
         </Link>
 
         <a href="mailto:xilaluna1@gmail.com">
