@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +6,47 @@
 
 @layer base {
   body {
-    @apply font-dmmono;
+    @apply bg-neutral-100 font-dmmono text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
+  }
+}
+
+@layer components {
+  .highlight {
+    @apply text-pink-400 transition duration-300 ease-in-out dark:text-indigo-400;
+  }
+  .sub-color {
+    @apply text-neutral-400 dark:text-neutral-600;
+  }
+  .border-color {
+    @apply border-neutral-400 dark:border-neutral-600;
+  }
+  .heading-color {
+    @apply text-neutral-900 dark:text-neutral-50;
+  }
+
+  .main-heading {
+    @apply heading-color text-4xl font-semibold sm:text-6xl;
+  }
+  .sub-heading {
+    @apply heading-color text-2xl;
+  }
+  .icon-style {
+    @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400 sm:h-6 sm:w-6;
+  }
+  .link-style {
+    @apply highlight hover:underline;
+  }
+
+  .container {
+    @apply mx-auto max-w-screen-sm px-4 sm:px-0;
+  }
+  .secondary-page {
+    @apply container space-y-8 py-10 sm:space-y-10 sm:py-20;
+  }
+  .btn {
+    @apply rounded-md bg-pink-400 px-4 py-2 text-center text-neutral-200 transition duration-300 ease-in-out hover:bg-neutral-900 dark:bg-indigo-400 dark:text-neutral-800 dark:hover:bg-neutral-100;
+  }
+  .secondary-btn {
+    @apply rounded-md border border-pink-400 px-4 py-2 text-pink-400 transition duration-300 ease-in-out hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
   }
 }
