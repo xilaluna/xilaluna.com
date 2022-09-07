@@ -10,10 +10,8 @@ const Copyright = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="absolute bottom-0 w-full">
-      <div className="border-color mx-auto max-w-screen-sm border-t py-3 sm:py-5">
-        <Copyright />
-      </div>
+    <footer className="border-color container mt-auto border-t py-3 sm:py-5">
+      <Copyright />
     </footer>
   );
 };

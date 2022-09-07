@@ -4,7 +4,7 @@ import { CaretRight } from 'phosphor-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center space-y-3 sm:space-y-4">
+    <section className="flex min-h-[95vh] flex-col items-center justify-center space-y-3 pb-20 sm:space-y-4">
       <div className="relative h-52 w-52 sm:h-64 sm:w-64 ">
         <Image
           src={'/images/profile-picture.jpg'}

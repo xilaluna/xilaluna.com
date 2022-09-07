@@ -20,7 +20,7 @@ interface projectInterface {
 }
 
 const getProjects = () => {
-  const filepath = path.join(process.cwd(), 'data', 'projects.json');
+  const filepath = path.join(process.cwd(), 'public', 'data', 'projects.json');
   const fileData = fs.readFileSync(filepath);
   return JSON.parse(fileData.toString());
 };
@@ -54,7 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Project = (props: { project: projectInterface }) => {
   return (
-    <div className="page-container space-y-5">
+    <div className="container space-y-5">
       <div className="flex items-end justify-start space-x-1">
         <Link href={'/projects'}>
           <a className="link-style pb-px">Projects</a>

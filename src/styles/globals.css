@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-100 font-dmmono text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
+    @apply h-full bg-neutral-100 font-dmmono text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
   }
 }
 
@@ -24,9 +24,6 @@
     @apply text-neutral-900 dark:text-neutral-50;
   }
 
-  .page-container {
-    @apply mx-auto flex max-w-screen-sm flex-col space-y-28 py-20 px-4 sm:px-0;
-  }
   .main-heading {
     @apply heading-color text-4xl font-semibold sm:text-6xl;
   }
@@ -45,5 +42,8 @@
   }
   .secondary-btn {
     @apply rounded-md border border-pink-400 px-4 py-2 text-pink-400 transition duration-300 ease-in-out hover:border-pink-500 hover:bg-pink-300/25 dark:border-indigo-400 dark:text-indigo-400 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/25;
+  }
+  .container {
+    @apply mx-auto max-w-screen-sm px-4 sm:px-0;
   }
 }
