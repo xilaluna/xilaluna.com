@@ -12,7 +12,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from 'next-themes';
 import skillsData from '../../../public/data/skills.json';
-import Heading from '~/components/Heading';
+import Heading from '../../components/Heading';
 
 ChartJS.register(
   CategoryScale,
