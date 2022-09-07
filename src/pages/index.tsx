@@ -5,11 +5,11 @@ import GetInTouch from '@/components/GetInTouch';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <main className="mx-auto max-w-screen-sm px-4 sm:px-0">
       <Hero />
       <Timeline />
       <GetInTouch />
-    </div>
+    </main>
   );
 };
 

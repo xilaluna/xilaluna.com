@@ -42,7 +42,7 @@ const Skills: NextPage = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <div className="page-container">
+    <main className="mx-auto flex max-w-screen-sm flex-col space-y-20 px-4 py-40 sm:px-0">
       <div className="flex flex-col items-center justify-center space-y-5">
         <h1 className="main-heading">Skills</h1>
         <p className="text-center">A list of my skills</p>
@@ -50,7 +50,10 @@ const Skills: NextPage = () => {
       <div className="space-y-20">
         {skillsData.map((group) => {
           return (
-            <div key={group.name}>
+            <div
+              className="border-color rounded-md border p-2"
+              key={group.name}
+            >
               <h2 className="pb-2 text-center text-lg">{group.name}</h2>
               <Bar
                 data={{
@@ -77,7 +80,7 @@ const Skills: NextPage = () => {
           );
         })}
       </div>
-    </div>
+    </main>
   );
 };
 
