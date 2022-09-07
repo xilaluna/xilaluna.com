@@ -1,3 +1,4 @@
+import Heading from '@/components/Heading';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,10 +7,7 @@ import projectData from '../../../public/data/projects.json';
 const Projects: NextPage = () => {
   return (
     <main className="secondary-page">
-      <div className="flex flex-col items-center justify-center space-y-5">
-        <h1 className="main-heading">Projects</h1>
-        <p className="text-center">A collection of my work</p>
-      </div>
+      <Heading title="Projects" subtitle="A collection of my work" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
         {projectData.map((project) => {
