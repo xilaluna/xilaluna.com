@@ -22,7 +22,7 @@
   },
   {
     "id": "fentscraper",
-    "title": "Fentanyl Epidemic Scraper",
+    "title": "Fentanyl Epidemic Tracker",
     "subtitle": "A Go scraper that pulls fentanyl articles to follow the fentanyl epidemic trend",
     "description": "My mission for this project was to create a scraper that identifies articles relating to fentanyl as a means to map the trend of the fentanyl epidemic, specifically its distribution from illegal websites.",
     "images": [
