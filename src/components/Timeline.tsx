@@ -1,6 +1,6 @@
 const Timeline: React.FC = () => {
   return (
-    <section className="flex min-h-screen flex-col">
+    <section className="flex flex-col">
       <div className="flex space-x-2 sm:space-x-4">
         <div className="flex flex-col items-center justify-center">
           <p>2022</p>

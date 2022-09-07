@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import {
   PaperPlaneTilt,
   House,
@@ -10,36 +11,39 @@ import {
 
 const Links: NextPage = () => {
   return (
-    <main className="container space-y-10 py-20">
-      <div className="flex flex-col items-center justify-center space-y-5">
+    <main className="secondary-page">
+      <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
         <h1 className="main-heading">Links</h1>
         <p className="text-center">@xilaluna</p>
       </div>
-      <div className="flex flex-col justify-center space-y-5">
-        <button className="btn">
+
+      <div className="flex flex-col items-center justify-center space-y-5">
+        <Link href={'/'}>
+          <a className="btn w-full max-w-sm">
+            <House className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
+            Personal Website
+          </a>
+        </Link>
+        <a className="btn w-full max-w-sm">
           <PaperPlaneTilt className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           Email
-        </button>
-        <button className="btn">
-          <House className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
-          Personal Website
-        </button>
-        <button className="btn">
+        </a>
+        <a className="btn w-full max-w-sm">
           <GithubLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           GitHub
-        </button>
-        <button className="btn">
+        </a>
+        <a className="btn w-full max-w-sm">
           <LinkedinLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           LinkedIn
-        </button>
-        <button className="btn ">
+        </a>
+        <a className="btn w-full max-w-sm">
           <StackOverflowLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           Stack Overflow
-        </button>
-        <button className="btn ">
+        </a>
+        <a className="btn w-full max-w-sm">
           <Coffee className="mb-0.5 mr-2 inline-block align-middle" />
           Buy Me a Coffee
-        </button>
+        </a>
       </div>
     </main>
   );
