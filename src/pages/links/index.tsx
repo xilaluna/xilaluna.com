@@ -17,28 +17,37 @@ const Links: NextPage = () => {
 
       <div className="flex flex-col items-center justify-center space-y-5">
         <Link href={'/'}>
-          <a className="btn w-full max-w-sm">
+          <a className="btn w-full max-w-sm" href="https://xilaluna.com/">
             <House className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
             Personal Website
           </a>
         </Link>
-        <a className="btn w-full max-w-sm">
+        <a className="btn w-full max-w-sm" href="mailto:xilaluna2@gmail.com">
           <PaperPlaneTilt className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           Email
         </a>
-        <a className="btn w-full max-w-sm">
+        <a className="btn w-full max-w-sm" href="https://github.com/xilaluna">
           <GithubLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           GitHub
         </a>
-        <a className="btn w-full max-w-sm">
+        <a
+          className="btn w-full max-w-sm"
+          href="https://www.linkedin.com/in/xilaluna/"
+        >
           <LinkedinLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           LinkedIn
         </a>
-        <a className="btn w-full max-w-sm">
+        <a
+          className="btn w-full max-w-sm"
+          href="https://stackoverflow.com/users/14382852/xilaluna"
+        >
           <StackOverflowLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
           Stack Overflow
         </a>
-        <a className="btn w-full max-w-sm">
+        <a
+          className="btn w-full max-w-sm"
+          href="https://www.buymeacoffee.com/xilaluna"
+        >
           <Coffee className="mb-0.5 mr-2 inline-block align-middle" />
           Buy Me a Coffee
         </a>
