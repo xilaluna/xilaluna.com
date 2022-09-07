@@ -8,7 +8,7 @@ import {
   StackOverflowLogo,
   Coffee,
 } from 'phosphor-react';
-import Heading from '@/components/Heading';
+import Heading from '~/components/Heading';
 
 const Links: NextPage = () => {
   return (
