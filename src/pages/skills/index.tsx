@@ -11,7 +11,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from 'next-themes';
-import skillsData from '../../public/data/skills.json';
+import skillsData from '../../../public/data/skills.json';
 
 ChartJS.register(
   CategoryScale,
@@ -42,7 +42,7 @@ const Skills: NextPage = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <main className="container space-y-10 py-20">
+    <main className="secondary-page">
       <div className="flex flex-col items-center justify-center space-y-5">
         <h1 className="main-heading">Skills</h1>
         <p className="text-center">A list of my skills</p>

@@ -5,7 +5,7 @@ import projectData from '../../../public/data/projects.json';
 
 const Projects: NextPage = () => {
   return (
-    <main className="container space-y-10 py-20">
+    <main className="secondary-page">
       <div className="flex flex-col items-center justify-center space-y-5">
         <h1 className="main-heading">Projects</h1>
         <p className="text-center">A collection of my work</p>
