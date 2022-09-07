@@ -20,15 +20,15 @@ const Hero: React.FC = () => {
         find solutions when there are none.
       </p>
       <div className="flex space-x-3 pt-4 sm:pt-5">
-        <Link href={'/projects'}>
+        <Link href={'/Links'}>
           <button className="btn">
-            Projects
+            Links
             <CaretRight className="mb-0.5 inline-block align-middle" />
           </button>
         </Link>
-        <Link href={'/skills'}>
+        <Link href={'/Projects'}>
           <button className="secondary-btn ">
-            Skills
+            Projects
             <CaretRight className="mb-0.5 inline-block align-middle" />
           </button>
         </Link>
