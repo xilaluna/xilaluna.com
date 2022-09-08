@@ -92,7 +92,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <a href="mailto:xilaluna2@gmail.com">
+        <a href="mailto:xilaluna2@gmail.com" aria-label="Email me">
           <PaperPlaneTilt className="icon-style" />
         </a>
 
