@@ -12,6 +12,7 @@ const Hero: React.FC = () => {
           layout="fill"
           objectFit="cover"
           className="rounded-full"
+          priority={true}
         />
       </div>
       <h1 className="main-heading">Xila Luna</h1>
