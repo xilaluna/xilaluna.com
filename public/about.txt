@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: DM Mono
+- Font Author: Copyright 2020 The DM Mono Project Authors (https://www.github.com/googlefonts/dm-mono)
+- Font Source: http://fonts.gstatic.com/s/dmmono/v10/aFTR7PB1QTsUX8KYvumzIYSnbKX9Rlk.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
