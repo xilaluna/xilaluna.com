@@ -19,3 +19,15 @@ export interface ProjectInterface {
   images: ImageInterface[];
   links: LinkInterface[];
 }
+
+export interface SkillInterface {
+  id: number;
+  name: string;
+  level: number;
+}
+
+export interface SkillGroupInterface {
+  id: string;
+  name: string;
+  skills: SkillInterface[];
+}
