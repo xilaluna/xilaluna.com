@@ -31,6 +31,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     .from('projects')
     .select('*, links(*), images(*)')
     .eq('id', id)
+    .order('id', { foreignTable: 'images' })
     .single();
 
   if (error) {
@@ -79,7 +80,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
         return (
           <div className="aspect-w-16 aspect-h-9 w-full" key={image.id}>
             <Image
-              src={`/images/${image.src}`}
+              src={image.src}
               alt={image.alt}
               layout="fill"
               objectFit="cover"

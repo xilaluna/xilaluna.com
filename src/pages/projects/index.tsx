@@ -32,7 +32,7 @@ const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
             <div key={project.id} className="flex flex-col space-y-2 ">
               <div className="aspect-w-16 aspect-h-9 w-full">
                 <Image
-                  src={`/images/${project.images[0].src}`}
+                  src={project.images[0].src}
                   alt={project.images[0].alt}
                   layout="fill"
                   objectFit="cover"
