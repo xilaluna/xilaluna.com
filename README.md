@@ -11,3 +11,10 @@ git pull https://github.com/xilaluna/portfolio.git
 ## Visit My Portfolio
 
 Visit my portfolio at **[xilaluna.com](https://xilaluna.com)**!
+
+##Tech Stack
+
+- Next.js
+- Tailwind CSS
+- Supabase
+- Typescript
