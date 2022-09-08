@@ -1,22 +1,61 @@
 import Heading from '@/components/Heading';
-import type { NextPage } from 'next';
+import { supabase } from '@/utils/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
-import projectData from '../../../public/data/projects.json';
 
-const Projects: NextPage = () => {
+type ImageType = {
+  id: number;
+  alt: string;
+  src: string;
+  type: string;
+};
+
+type LinkType = {
+  id: number;
+  name: string;
+  href: string;
+};
+
+type Project = {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  images: ImageType[];
+  links: LinkType[];
+};
+
+export async function getStaticProps() {
+  const { data, error } = await supabase
+    .from('projects')
+    .select('*, images!inner(*)')
+    .eq('images.type', 'thumbnail')
+    .order('id');
+  if (error) {
+    console.log(error);
+  }
+  console.log(data);
+  return {
+    props: {
+      projects: data,
+    },
+  };
+}
+
+const Projects = ({ projects }: { projects: Project[] }) => {
+  console.log(projects);
   return (
     <main className="secondary-page">
       <Heading title="Projects" subtitle="A collection of my work" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
-        {projectData.map((project) => {
+        {projects.map((project) => {
           return (
             <div key={project.id} className="flex flex-col space-y-2 ">
               <div className="aspect-w-16 aspect-h-9 w-full">
                 <Image
-                  src={`/images/${project.images[0]}`}
-                  alt={project.title}
+                  src={`/images/${project.images[0].src}`}
+                  alt={project.images[0].alt}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg"
