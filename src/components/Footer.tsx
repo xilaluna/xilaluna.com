@@ -1,6 +1,6 @@
 const Copyright = () => {
   return (
-    <p className="text-center text-neutral-600 dark:text-neutral-400">
+    <p className="text-center text-neutral-700 dark:text-neutral-400">
       {'Copyright © '}
       {new Date().getFullYear()}
       {' Xila Luna'}
