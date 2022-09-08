@@ -46,17 +46,15 @@ export async function getStaticProps() {
   if (error) {
     console.log(error);
   }
-  console.log(data);
 
   return {
     props: {
-      skills: data,
+      skillGroup: data,
     },
   };
 }
 
-const Skills = ({ skills }: { skills: SkillGroupInterface[] }) => {
-  console.log(skills);
+const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
@@ -64,7 +62,7 @@ const Skills = ({ skills }: { skills: SkillGroupInterface[] }) => {
     <main className="secondary-page">
       <Heading title="Skills" subtitle="A list of my skills" />
       <div className="space-y-5">
-        {skills.map((group) => {
+        {skillGroup.map((group) => {
           return (
             <div key={group.name}>
               <h2 className="pb-2 text-center text-lg">{group.name}</h2>
