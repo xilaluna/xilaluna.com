@@ -16,13 +16,13 @@ const Hero: React.FC = () => {
         />
       </div>
       <h1 className="main-heading">Xila Luna</h1>
-      <p className="max-w-xl text-center ">
+      <p className="max-w-xl text-center">
         Xila Luna is a creative full-stack engineer who is willing and able to
         find solutions when there are none.
       </p>
       <div className="flex space-x-3 pt-4 sm:pt-5">
         <Link href={'/links'}>
-          <button className="btn">
+          <button className="btn ">
             Links
             <CaretRight className="mb-0.5 inline-block align-middle" />
           </button>

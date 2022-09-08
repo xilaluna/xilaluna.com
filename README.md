@@ -14,7 +14,8 @@ Visit my portfolio at **[xilaluna.com](https://xilaluna.com)**!
 
 ## Tech Stack
 
-- Next.js
-- Tailwind CSS
-- Supabase
-- Typescript
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Phosphor Icons](https://phosphoricons.com/)
+- [Supabase](https://supabase.io/)
+- [Typescript](https://www.typescriptlang.org/)

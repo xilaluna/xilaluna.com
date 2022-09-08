@@ -31,7 +31,7 @@
     @apply heading-color text-2xl;
   }
   .icon-style {
-    @apply h-5 w-5 hover:text-pink-400 dark:hover:text-indigo-400 sm:h-6 sm:w-6;
+    @apply h-6 w-6 hover:text-pink-400 dark:hover:text-indigo-400;
   }
   .link-style {
     @apply highlight hover:underline;
