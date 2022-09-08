@@ -22,7 +22,7 @@ const Navbar = () => {
   useEffect(() => {
     setMount(true);
     const handleNavStyles = () => {
-      if (window.scrollY > 80) {
+      if (window.scrollY > 40) {
         setNavStyles(true);
       } else {
         setNavStyles(false);

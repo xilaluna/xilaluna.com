@@ -9,7 +9,7 @@ export async function getStaticProps() {
     .from('projects')
     .select('*, images!inner(*)')
     .eq('images.type', 'thumbnail')
-    .order('id');
+    .order('order');
   if (error) {
     console.log(error);
   }
