@@ -1,6 +1,6 @@
 const Copyright = () => {
   return (
-    <p className="text-center text-neutral-400 dark:text-neutral-600">
+    <p className="text-center text-neutral-400 dark:text-neutral-500">
       {'Copyright © '}
       {new Date().getFullYear()}
       {' Xila Luna'}
@@ -10,7 +10,7 @@ const Copyright = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="border-color container mt-auto border-t py-3 sm:py-5">
+    <footer className="container py-3 mt-auto border-t border-color sm:py-5">
       <Copyright />
     </footer>
   );
