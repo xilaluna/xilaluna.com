@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import React from 'react';
 import {
   Chart as ChartJS,
@@ -11,8 +10,9 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from 'next-themes';
-import skillsData from '../../../public/data/skills.json';
+import { supabase } from '@/utils/supabase';
 import Heading from '@/components/Heading';
+import { SkillGroupInterface } from '@/types';
 
 ChartJS.register(
   CategoryScale,
@@ -38,7 +38,25 @@ const options = {
   },
 };
 
-const Skills: NextPage = () => {
+export async function getStaticProps() {
+  const { data, error } = await supabase
+    .from('skill_groups')
+    .select('*, skills(*)')
+    .order('order');
+  if (error) {
+    console.log(error);
+  }
+  console.log(data);
+
+  return {
+    props: {
+      skills: data,
+    },
+  };
+}
+
+const Skills = ({ skills }: { skills: SkillGroupInterface[] }) => {
+  console.log(skills);
   const { systemTheme, theme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
@@ -46,13 +64,13 @@ const Skills: NextPage = () => {
     <main className="secondary-page">
       <Heading title="Skills" subtitle="A list of my skills" />
       <div className="space-y-5">
-        {skillsData.map((group) => {
+        {skills.map((group) => {
           return (
             <div key={group.name}>
               <h2 className="pb-2 text-center text-lg">{group.name}</h2>
               <Bar
                 data={{
-                  labels: group.skills.map((skill) => skill.skill),
+                  labels: group.skills.map((skill) => skill.name),
                   datasets: [
                     {
                       label: 'Level',
