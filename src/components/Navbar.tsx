@@ -60,14 +60,14 @@ const Navbar = () => {
           navStyles ? 'border-color border-b' : ''
         }`}
       >
-        <Link href={'/'}>
+        <Link href={'/'} aria-label="Home Page">
           <House
             className={`icon-style cursor-pointer ${
               router.pathname === '/' ? 'highlight' : ''
             }`}
           />
         </Link>
-        <Link href={'/projects'}>
+        <Link href={'/projects'} aria-label="Projects">
           <RocketLaunch
             className={`icon-style cursor-pointer ${
               router.pathname === '/projects' ||
@@ -77,14 +77,14 @@ const Navbar = () => {
             }`}
           />
         </Link>
-        <Link href={'/skills'}>
+        <Link href={'/skills'} aria-label="Skils">
           <Brain
             className={`icon-style cursor-pointer ${
               router.pathname === '/skills' ? 'highlight' : ''
             }`}
           />
         </Link>
-        <Link href={'/links'}>
+        <Link href={'/links'} aria-label="Links">
           <LinkIcon
             className={`icon-style cursor-pointer ${
               router.pathname === '/links' ? 'highlight' : ''
@@ -92,7 +92,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <a href="mailto:xilaluna2@gmail.com" aria-label="Email me">
+        <a href="mailto:xilaluna2@gmail.com" aria-label="Send Email">
           <PaperPlaneTilt className="icon-style" />
         </a>
 
