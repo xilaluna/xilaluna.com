@@ -1,63 +1,56 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import path from 'path';
-import fs from 'fs';
+import { supabase } from '@/utils/supabase';
 import { CaretLeft, ArrowSquareOut } from 'phosphor-react';
-
-interface linkInterface {
-  name: string;
-  link: string;
-}
-
-interface projectInterface {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  images: string[];
-  links: linkInterface[];
-}
-
-const getProjects = () => {
-  const filepath = path.join(process.cwd(), 'public', 'data', 'projects.json');
-  const fileData = fs.readFileSync(filepath);
-  return JSON.parse(fileData.toString());
-};
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const projectId = context.params?.id;
-  const data = await getProjects();
-  const foundProject = data.find(
-    (project: projectInterface) => project.id === projectId
-  );
-  if (!foundProject) {
-    return { props: { project: null } };
-  }
-  return {
-    props: {
-      project: foundProject,
-    },
-  };
-};
+import { ProjectInterface } from '@/types';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await getProjects();
-  const paths = data.map((project: projectInterface) => ({
-    params: { id: project.id },
+  const { data: projects, error } = await supabase
+    .from('projects')
+    .select('id');
+  if (error) {
+    console.log(error);
+  }
+
+  const paths = projects!.map(({ id }) => ({
+    params: {
+      id,
+    },
   }));
+
   return {
     paths,
     fallback: false,
   };
 };
 
-const Project = (props: { project: projectInterface }) => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id;
+  const { data: project, error } = await supabase
+    .from('projects')
+    .select('*, links(*), images(*)')
+    .eq('id', id)
+    .single();
+
+  if (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      project,
+    },
+  };
+};
+
+const Project = ({ project }: { project: ProjectInterface }) => {
+  console.log(project);
   return (
     <main className="secondary-page">
       <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
         <h1 className="heading-color text-3xl font-semibold sm:text-4xl">
-          {props.project.title}
+          {project.title}
         </h1>
       </div>
       <section className="flex flex-col space-y-2">
@@ -67,13 +60,13 @@ const Project = (props: { project: projectInterface }) => {
             Back to Projects
           </a>
         </Link>
-        <p className="text-justify">{props.project.description}</p>
+        <p className="text-justify">{project.description}</p>
 
         <ul className="list-inside list-disc	">
-          {props.project.links.map((link: linkInterface) => {
+          {project.links.map((link) => {
             return (
-              <li key={link.name}>
-                <a href={link.link} className="link-style">
+              <li key={link.id}>
+                <a href={link.href} className="link-style">
                   {link.name}{' '}
                   <ArrowSquareOut className="mb-1 inline-block align-middle" />
                 </a>
@@ -83,12 +76,12 @@ const Project = (props: { project: projectInterface }) => {
         </ul>
       </section>
 
-      {props.project.images.map((image: string) => {
+      {project.images.map((image) => {
         return (
-          <div className="aspect-w-16 aspect-h-9 w-full" key={image}>
+          <div className="aspect-w-16 aspect-h-9 w-full" key={image.id}>
             <Image
-              src={`/images/${image}`}
-              alt={props.project.id}
+              src={`/images/${image.src}`}
+              alt={image.alt}
               layout="fill"
               objectFit="cover"
               className="rounded-lg"

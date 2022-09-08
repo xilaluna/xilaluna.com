@@ -2,28 +2,7 @@ import Heading from '@/components/Heading';
 import { supabase } from '@/utils/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
-
-type ImageType = {
-  id: number;
-  alt: string;
-  src: string;
-  type: string;
-};
-
-type LinkType = {
-  id: number;
-  name: string;
-  href: string;
-};
-
-type Project = {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  images: ImageType[];
-  links: LinkType[];
-};
+import { ProjectInterface } from '@/types';
 
 export async function getStaticProps() {
   const { data, error } = await supabase
@@ -34,7 +13,7 @@ export async function getStaticProps() {
   if (error) {
     console.log(error);
   }
-  console.log(data);
+
   return {
     props: {
       projects: data,
@@ -42,8 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-const Projects = ({ projects }: { projects: Project[] }) => {
-  console.log(projects);
+const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
   return (
     <main className="secondary-page">
       <Heading title="Projects" subtitle="A collection of my work" />
