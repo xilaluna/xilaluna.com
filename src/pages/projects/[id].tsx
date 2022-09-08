@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Project = ({ project }: { project: ProjectInterface }) => {
-  console.log(project);
   return (
     <main className="secondary-page">
       <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
