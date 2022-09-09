@@ -77,7 +77,7 @@ const Navbar = () => {
             }`}
           />
         </Link>
-        <Link href={'/skills'} aria-label="Skils">
+        <Link href={'/skills'} aria-label="Skills">
           <Brain
             className={`icon-style cursor-pointer ${
               router.pathname === '/skills' ? 'highlight' : ''
