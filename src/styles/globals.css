@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-100 font-dmmono text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400;
+    @apply bg-neutral-100 font-dmmono text-neutral-600 transition dark:bg-neutral-900 dark:text-neutral-400;
   }
 }
 
