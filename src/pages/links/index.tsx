@@ -15,8 +15,8 @@ const Links: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Projects - Xila Luna</title>
-        <meta name="description" content="Xila Luna's projects" />
+        <title>Links - Xila Luna</title>
+        <meta name="description" content="Xila Luna's links" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
