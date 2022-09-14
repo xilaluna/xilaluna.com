@@ -15,11 +15,11 @@ const Home: NextPage = () => {
         />
         <meta property="og:title" content="Xila Luna" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://xilaluna.com/" />
         <meta
           property="og:image"
-          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/profile-picture.jpg"
+          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/website-image.png?t=2022-09-14T01%3A50%3A00.002Z"
         />
-        <meta property="og:url" content="https://xilaluna.com/" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
