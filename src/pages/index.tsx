@@ -13,6 +13,13 @@ const Home: NextPage = () => {
           name="description"
           content="Xila Luna's personal portfolio website"
         />
+        <meta property="og:title" content="Xila Luna" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/profile-picture.jpg"
+        />
+        <meta property="og:url" content="https://xilaluna.com/" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

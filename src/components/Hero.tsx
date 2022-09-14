@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <div className="relative h-44 w-44 sm:h-64 sm:w-64 ">
         <Image
           src={
-            'https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/profile-picture.jpg'
+            'https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/profile-picture.jpg'
           }
           alt="Profile Image"
           layout="fill"
