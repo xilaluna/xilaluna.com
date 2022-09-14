@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -60,6 +61,28 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
 
   return (
     <main className="secondary-page">
+      <Head>
+        <title>Skills - Xila Luna</title>
+        <meta name="description" content="Xila Luna's Skills" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <Heading title="Skills" subtitle="A list of my skills" />
       <div className="space-y-5">
         {skillGroup.map((group) => {
