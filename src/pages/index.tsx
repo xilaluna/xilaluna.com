@@ -14,7 +14,6 @@ const Home: NextPage = () => {
           content="Xila Luna's personal portfolio website"
         />
         <meta property="og:title" content="Xila Luna" />
-        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://xilaluna.com/" />
         <meta
           property="og:image"

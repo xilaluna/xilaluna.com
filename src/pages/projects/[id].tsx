@@ -51,7 +51,16 @@ const Project = ({ project }: { project: ProjectInterface }) => {
     <>
       <Head>
         <title>{project.title} - Xila Luna</title>
-        <meta name="description" content="Xila Luna's project" />
+        <meta name="description" content={project.subtitle} />
+        <meta property="og:title" content={`${project.title} - Xila Luna`} />
+        <meta
+          property="og:url"
+          content={`https://xilaluna.com/projects/${project.id}`}
+        />
+        <meta
+          property="og:image"
+          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/website-image.png?t=2022-09-14T01%3A50%3A00.002Z"
+        />
       </Head>
 
       <main className="secondary-page">

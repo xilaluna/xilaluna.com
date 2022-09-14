@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="flex min-h-screen flex-col">
