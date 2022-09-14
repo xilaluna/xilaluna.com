@@ -63,7 +63,7 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
     <main className="secondary-page">
       <Head>
         <title>Skills - Xila Luna</title>
-        <meta name="description" content="Xila Luna's Skills" />
+        <meta name="description" content="Xila Luna's skills" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

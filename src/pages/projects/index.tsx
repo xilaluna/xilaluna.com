@@ -27,7 +27,7 @@ const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
     <>
       <Head>
         <title>Projects - Xila Luna</title>
-        <meta name="description" content="Xila Luna's Projects" />
+        <meta name="description" content="Xila Luna's projects" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
