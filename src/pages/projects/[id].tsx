@@ -57,10 +57,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
           property="og:url"
           content={`https://xilaluna.com/projects/${project.id}`}
         />
-        <meta
-          property="og:image"
-          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/website-image.png?t=2022-09-14T01%3A50%3A00.002Z"
-        />
+        <meta property="og:image" content={project.images[0].src} />
       </Head>
 
       <main className="secondary-page">
