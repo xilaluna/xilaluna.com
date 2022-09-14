@@ -9,7 +9,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Xila Luna</title>
-        <meta name="description" content="Xila Luna's Portfolio" />
+        <meta
+          name="description"
+          content="Xila Luna's personal portfolio website"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

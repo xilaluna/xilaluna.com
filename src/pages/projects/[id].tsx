@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { supabase } from '@/utils/supabase';
@@ -47,49 +48,73 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Project = ({ project }: { project: ProjectInterface }) => {
   return (
-    <main className="secondary-page">
-      <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
-        <h1 className="heading-color text-3xl font-semibold sm:text-4xl">
-          {project.title}
-        </h1>
-      </div>
-      <section className="flex flex-col space-y-2">
-        <Link href={'/projects'}>
-          <a className="link-style">
-            <CaretLeft className="mb-0.5 mr-1 inline-block align-middle" />
-            Back to Projects
-          </a>
-        </Link>
-        <p className="text-justify">{project.description}</p>
+    <>
+      <Head>
+        <title>{project.title} - Xila Luna</title>
+        <meta name="description" content="Xila Luna's project" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
+      <main className="secondary-page">
+        <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
+          <h1 className="heading-color text-3xl font-semibold sm:text-4xl">
+            {project.title}
+          </h1>
+        </div>
+        <section className="flex flex-col space-y-2">
+          <Link href={'/projects'}>
+            <a className="link-style">
+              <CaretLeft className="mb-0.5 mr-1 inline-block align-middle" />
+              Back to Projects
+            </a>
+          </Link>
+          <p className="text-justify">{project.description}</p>
 
-        <ul className="list-inside list-disc	">
-          {project.links.map((link) => {
-            return (
-              <li key={link.id}>
-                <a href={link.href} className="link-style">
-                  {link.name}{' '}
-                  <ArrowSquareOut className="mb-1 inline-block align-middle" />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+          <ul className="list-inside list-disc	">
+            {project.links.map((link) => {
+              return (
+                <li key={link.id}>
+                  <a href={link.href} className="link-style">
+                    {link.name}{' '}
+                    <ArrowSquareOut className="mb-1 inline-block align-middle" />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
 
-      {project.images.map((image) => {
-        return (
-          <div className="aspect-w-16 aspect-h-9 w-full" key={image.id}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </div>
-        );
-      })}
-    </main>
+        {project.images.map((image) => {
+          return (
+            <div className="aspect-w-16 aspect-h-9 w-full" key={image.id}>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
+          );
+        })}
+      </main>
+    </>
   );
 };
 
