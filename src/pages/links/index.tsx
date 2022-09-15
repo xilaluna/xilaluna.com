@@ -47,13 +47,6 @@ const Links: NextPage = () => {
             <LinkedinLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
             LinkedIn
           </a>
-          <a
-            className="btn-link "
-            href="https://stackoverflow.com/users/14382852/xilaluna"
-          >
-            <StackOverflowLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
-            Stack Overflow
-          </a>
           <a className="btn-link " href="https://www.buymeacoffee.com/xilaluna">
             <Coffee className="mb-0.5 mr-2 inline-block align-middle" />
             Buy Me a Coffee
