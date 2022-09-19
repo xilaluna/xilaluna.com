@@ -21,7 +21,7 @@ const Links: NextPage = () => {
         <meta property="og:url" content="https://xilaluna.com/links" />
         <meta
           property="og:image"
-          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/website-image.png?t=2022-09-14T01%3A50%3A00.002Z"
+          content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/links-page.png?t=2022-09-19T09%3A43%3A20.435Z"
         />
       </Head>
 
