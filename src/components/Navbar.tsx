@@ -37,7 +37,7 @@ const Navbar = () => {
     if (currentTheme === 'dark') {
       return (
         <MoonStars
-          className="icon-style"
+          className="icon-style active:animate-spin"
           role="button"
           onClick={() => setTheme('light')}
         />
@@ -45,7 +45,7 @@ const Navbar = () => {
     } else {
       return (
         <Sun
-          className="icon-style"
+          className="icon-style active:animate-spin"
           role="button"
           onClick={() => setTheme('dark')}
         />
