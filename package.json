@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.2",
     "@supabase/supabase-js": "^1.35.6",
     "chart.js": "^3.9.1",
     "next": "12.2.5",
