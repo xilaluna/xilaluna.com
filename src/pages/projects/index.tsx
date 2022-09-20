@@ -4,6 +4,7 @@ import { supabase } from '@/utils/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectInterface } from '@/types';
+import TransitionPage from '@/components/TransitionPage';
 
 export async function getStaticProps() {
   const { data, error } = await supabase
@@ -36,7 +37,7 @@ const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
         />
       </Head>
 
-      <main className="secondary-page">
+      <TransitionPage className="secondary-page">
         <Heading title="Projects" subtitle="A collection of my work" />
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
@@ -62,7 +63,7 @@ const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
             );
           })}
         </div>
-      </main>
+      </TransitionPage>
     </>
   );
 };

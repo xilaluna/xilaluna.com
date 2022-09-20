@@ -10,6 +10,7 @@ import {
   Coffee,
 } from 'phosphor-react';
 import Heading from '@/components/Heading';
+import TransitionPage from '@/components/TransitionPage';
 
 const Links: NextPage = () => {
   return (
@@ -25,7 +26,7 @@ const Links: NextPage = () => {
         />
       </Head>
 
-      <main className="secondary-page">
+      <TransitionPage className="secondary-page">
         <Heading title="Links" subtitle="@xilaluna" />
 
         <div className="flex flex-col items-center justify-center space-y-5">
@@ -52,7 +53,7 @@ const Links: NextPage = () => {
             Buy Me a Coffee
           </a>
         </div>
-      </main>
+      </TransitionPage>
     </>
   );
 };

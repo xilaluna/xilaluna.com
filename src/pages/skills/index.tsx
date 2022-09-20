@@ -14,6 +14,7 @@ import { useTheme } from 'next-themes';
 import { supabase } from '@/utils/supabase';
 import Heading from '@/components/Heading';
 import { SkillGroupInterface } from '@/types';
+import TransitionPage from '@/components/TransitionPage';
 
 ChartJS.register(
   CategoryScale,
@@ -72,7 +73,7 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
         />
       </Head>
 
-      <main className="secondary-page">
+      <TransitionPage className="secondary-page">
         <Heading title="Skills" subtitle="A list of my skills" />
         <div className="space-y-5">
           {skillGroup.map((group) => {
@@ -104,7 +105,7 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
             );
           })}
         </div>
-      </main>
+      </TransitionPage>
     </>
   );
 };

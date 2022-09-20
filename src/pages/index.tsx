@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Hero from '@/components/Hero';
 import Timeline from '@/components/Timeline';
 import GetInTouch from '@/components/GetInTouch';
+import TransitionPage from '@/components/TransitionPage';
 
 const Home: NextPage = () => {
   return (
@@ -20,11 +21,12 @@ const Home: NextPage = () => {
           content="https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/website-image.png?t=2022-09-14T01%3A50%3A00.002Z"
         />
       </Head>
-      <main className="container">
+
+      <TransitionPage className="container">
         <Hero />
         <Timeline />
         <GetInTouch />
-      </main>
+      </TransitionPage>
     </>
   );
 };

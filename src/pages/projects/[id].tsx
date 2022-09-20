@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { supabase } from '@/utils/supabase';
 import { CaretLeft, ArrowSquareOut } from 'phosphor-react';
 import { ProjectInterface } from '@/types';
+import TransitionPage from '@/components/TransitionPage';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data: projects, error } = await supabase
@@ -60,7 +61,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
         <meta property="og:image" content={project.images[0].src} />
       </Head>
 
-      <main className="secondary-page">
+      <TransitionPage className="secondary-page">
         <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
           <h1 className="heading-color text-3xl font-semibold sm:text-4xl">
             {project.title}
@@ -102,7 +103,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
             </div>
           );
         })}
-      </main>
+      </TransitionPage>
     </>
   );
 };
