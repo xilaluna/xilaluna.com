@@ -5,7 +5,7 @@
 ## Download for a Template
 
 ```
-git pull https://github.com/xilaluna/portfolio.git
+git clone https://github.com/xilaluna/portfolio.git
 ```
 
 ## Visit My Portfolio
