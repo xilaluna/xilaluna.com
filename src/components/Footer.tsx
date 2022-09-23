@@ -1,6 +1,8 @@
+import { Star } from 'phosphor-react';
+
 const Copyright = () => {
   return (
-    <p className="text-center text-neutral-400 dark:text-neutral-600">
+    <p className="pb-2 text-neutral-400 dark:text-neutral-600">
       {'Copyright © '}
       {new Date().getFullYear()}
       {' Xila Luna'}
@@ -10,8 +12,17 @@ const Copyright = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="border-color container mt-auto border-t py-3 sm:py-5">
+    <footer className="border-color container mt-auto flex flex-col items-center justify-center border-t py-3 sm:py-5">
       <Copyright />
+      <a
+        className="text-neutral-400 hover:text-pink-400 hover:underline dark:text-neutral-600 dark:hover:text-indigo-400"
+        href="https://github.com/xilaluna/xilaluna.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Star className="mb-0.5 mr-2 inline-block h-4 w-4 align-middle" />
+        Source Code
+      </a>
     </footer>
   );
 };
