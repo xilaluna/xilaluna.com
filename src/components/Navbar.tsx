@@ -92,7 +92,12 @@ const Navbar = () => {
           />
         </Link>
 
-        <a href="mailto:xilaluna2@gmail.com" aria-label="Send Email">
+        <a
+          href="mailto:xilaluna2@gmail.com"
+          aria-label="Send Email"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <PaperPlaneTilt className="icon-style" />
         </a>
 

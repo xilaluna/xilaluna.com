@@ -11,6 +11,7 @@ import {
 } from 'phosphor-react';
 import Heading from '@/components/Heading';
 import TransitionPage from '@/components/TransitionPage';
+import React from 'react';
 
 const Links: NextPage = () => {
   return (
@@ -31,27 +32,32 @@ const Links: NextPage = () => {
 
         <div className="flex flex-col items-center justify-center space-y-5">
           <Link href={'/'}>
-            <a className="btn-link " href="https://xilaluna.com/">
-              <House className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
-              Personal Website
-            </a>
+            <ButtonLink
+              href="https://xilaluna.com/"
+              Icon={<House />}
+              text="Personal Website"
+            />
           </Link>
-          <a className="btn-link " href="mailto:xilaluna2@gmail.com">
-            <PaperPlaneTilt className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
-            Email
-          </a>
-          <a className="btn-link " href="https://github.com/xilaluna">
-            <GithubLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
-            GitHub
-          </a>
-          <a className="btn-link " href="https://www.linkedin.com/in/xilaluna/">
-            <LinkedinLogo className="mb-0.5 mr-2 inline-block h-5 w-5 align-middle" />
-            LinkedIn
-          </a>
-          <a className="btn-link " href="https://www.buymeacoffee.com/xilaluna">
-            <Coffee className="mb-0.5 mr-2 inline-block align-middle" />
-            Buy Me a Coffee
-          </a>
+          <ButtonLink
+            href="mailto:xilaluna2@gmail.com"
+            Icon={<PaperPlaneTilt />}
+            text="Email"
+          />
+          <ButtonLink
+            href="https://github.com/xilaluna"
+            Icon={<GithubLogo />}
+            text="GitHub"
+          />
+          <ButtonLink
+            href="https://www.linkedin.com/in/xilaluna/"
+            Icon={<LinkedinLogo />}
+            text="LinkedIn"
+          />
+          <ButtonLink
+            href="https://www.buymeacoffee.com/xilaluna"
+            Icon={<Coffee />}
+            text="Buy Me A Coffee"
+          />
         </div>
       </TransitionPage>
     </>
@@ -59,3 +65,25 @@ const Links: NextPage = () => {
 };
 
 export default Links;
+
+interface ButtonLinkProps {
+  href: string;
+  Icon: React.ReactElement;
+  text: string;
+}
+
+const ButtonLink: React.FC<ButtonLinkProps> = ({ href, Icon, text }) => {
+  return (
+    <a
+      className="btn w-full px-6 py-4"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {React.cloneElement(Icon, {
+        className: 'mb-0.5 mr-2 inline-block h-5 w-5 align-middle',
+      })}
+      {text}
+    </a>
+  );
+};
