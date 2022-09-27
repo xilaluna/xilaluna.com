@@ -8,11 +8,11 @@ const Timeline: React.FC = () => {
         </div>
         <div className="flex flex-col space-y-5 pb-5">
           <p>
-            Developed the project LendA as a part of the{' '}
+            Developed full-stack MERN application while a part of{' '}
             <a href="https://www.joincolab.io/" className="link-style">
               Co.Lab
-            </a>{' '}
-            8 week program.
+            </a>
+            .
           </p>
           <p>
             Graduated from{' '}

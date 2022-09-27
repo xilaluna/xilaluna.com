@@ -51,7 +51,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
   return (
     <>
       <Head>
-        <title>{project.title} - Xila Luna</title>
+        <title>{project.id} - Xila Luna</title>
         <meta name="description" content={project.subtitle} />
         <meta property="og:title" content={`${project.title} - Xila Luna`} />
         <meta
