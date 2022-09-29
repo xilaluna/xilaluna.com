@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useTheme } from 'next-themes';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 import {
   Brain,
   MoonStars,
   RocketLaunch,
-  PaperPlaneTilt,
+  Scroll,
   Sun,
   House,
   Link as LinkIcon,
-} from 'phosphor-react';
+} from "phosphor-react";
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -28,18 +28,18 @@ const Navbar = () => {
         setNavStyles(false);
       }
     };
-    window.addEventListener('scroll', handleNavStyles);
+    window.addEventListener("scroll", handleNavStyles);
   }, []);
 
   const handleThemeChange = () => {
     if (!mounted) return null;
-    const currentTheme = theme === 'system' ? systemTheme : theme;
-    if (currentTheme === 'dark') {
+    const currentTheme = theme === "system" ? systemTheme : theme;
+    if (currentTheme === "dark") {
       return (
         <MoonStars
           className="icon-style active:animate-spin"
           role="button"
-          onClick={() => setTheme('light')}
+          onClick={() => setTheme("light")}
         />
       );
     } else {
@@ -47,7 +47,7 @@ const Navbar = () => {
         <Sun
           className="icon-style active:animate-spin"
           role="button"
-          onClick={() => setTheme('dark')}
+          onClick={() => setTheme("dark")}
         />
       );
     }
@@ -57,50 +57,49 @@ const Navbar = () => {
     <header className="sticky top-0 z-10 backdrop-blur-md">
       <nav
         className={`container flex items-center justify-between space-x-3 py-3 sm:py-5 ${
-          navStyles ? 'border-color border-b' : ''
+          navStyles ? "border-color border-b" : ""
         }`}
       >
-        <Link href={'/'} aria-label="Home Page">
+        <Link href={"/"} aria-label="Home Page">
           <House
             className={`icon-style cursor-pointer ${
-              router.pathname === '/' ? 'highlight' : ''
+              router.pathname === "/" ? "highlight" : ""
             }`}
           />
         </Link>
-        <Link href={'/projects'} aria-label="Projects">
+        <Link href={"/projects"} aria-label="Projects">
           <RocketLaunch
             className={`icon-style cursor-pointer ${
-              router.pathname === '/projects' ||
-              router.pathname === '/projects/[id]'
-                ? 'highlight'
-                : ''
+              router.pathname === "/projects" ||
+              router.pathname === "/projects/[id]"
+                ? "highlight"
+                : ""
             }`}
           />
         </Link>
-        <Link href={'/skills'} aria-label="Skills">
+        <Link href={"/skills"} aria-label="Skills">
           <Brain
             className={`icon-style cursor-pointer ${
-              router.pathname === '/skills' ? 'highlight' : ''
+              router.pathname === "/skills" ? "highlight" : ""
             }`}
           />
         </Link>
-        <Link href={'/links'} aria-label="Links">
+        <Link href={"/blog"} aria-label="Blog">
+          <Scroll
+            className={`icon-style cursor-pointer ${
+              router.pathname === "/blog" || router.pathname === "/blog/[id]"
+                ? "highlight"
+                : ""
+            }`}
+          />
+        </Link>
+        <Link href={"/links"} aria-label="Links">
           <LinkIcon
             className={`icon-style cursor-pointer ${
-              router.pathname === '/links' ? 'highlight' : ''
+              router.pathname === "/links" ? "highlight" : ""
             }`}
           />
         </Link>
-
-        <a
-          href="mailto:xilaluna2@gmail.com"
-          aria-label="Send Email"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <PaperPlaneTilt className="icon-style" />
-        </a>
-
         {handleThemeChange()}
       </nav>
     </header>
