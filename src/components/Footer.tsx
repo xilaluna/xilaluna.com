@@ -1,11 +1,11 @@
-import { Star } from 'phosphor-react';
+import { Star } from "phosphor-react";
 
 const Copyright = () => {
   return (
     <p className="pb-2 text-neutral-400 dark:text-neutral-600">
-      {'Copyright © '}
+      {"Copyright © "}
       {new Date().getFullYear()}
-      {' Xila Luna'}
+      {" Xila Luna"}
     </p>
   );
 };
@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Star className="mb-0.5 mr-2 inline-block h-4 w-4 align-middle" />
         Source Code
+        <Star className="mb-0.5 ml-2 inline-block h-4 w-4 align-middle" />
       </a>
     </footer>
   );
