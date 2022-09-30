@@ -1,10 +1,11 @@
-import Heading from "@/components/Heading";
+import type { NextPage } from "next";
 import Head from "next/head";
-import { supabase } from "@/utils/supabase";
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectInterface } from "@/types";
 import TransitionPage from "@/components/TransitionPage";
+import Heading from "@/components/Heading";
+import { supabase } from "@/utils/supabase";
+import { ProjectInterface } from "@/types";
 
 export async function getStaticProps() {
   const { data, error } = await supabase
@@ -23,7 +24,7 @@ export async function getStaticProps() {
   };
 }
 
-const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
+const Projects: NextPage<{ projects: ProjectInterface[] }> = ({ projects }) => {
   return (
     <>
       <Head>
