@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,13 +8,13 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-import { useTheme } from 'next-themes';
-import { supabase } from '@/utils/supabase';
-import Heading from '@/components/Heading';
-import { SkillGroupInterface } from '@/types';
-import TransitionPage from '@/components/TransitionPage';
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+import { useTheme } from "next-themes";
+import { supabase } from "@/utils/supabase";
+import Heading from "@/components/Heading";
+import { SkillGroupInterface } from "@/types";
+import TransitionPage from "@/components/TransitionPage";
 
 ChartJS.register(
   CategoryScale,
@@ -22,7 +22,7 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 const options = {
@@ -42,9 +42,9 @@ const options = {
 
 export async function getStaticProps() {
   const { data, error } = await supabase
-    .from('skill_groups')
-    .select('*, skills(*)')
-    .order('order');
+    .from("skill_groups")
+    .select("*, skills(*)")
+    .order("order");
   if (error) {
     console.log(error);
   }
@@ -58,7 +58,7 @@ export async function getStaticProps() {
 
 const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
   const { systemTheme, theme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <>
@@ -85,16 +85,16 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
                     labels: group.skills.map((skill) => skill.name),
                     datasets: [
                       {
-                        label: 'Level',
+                        label: "Level",
                         data: group.skills.map((skill) => skill.level),
                         backgroundColor:
-                          currentTheme === 'dark'
-                            ? 'rgb(99 102 241 / 0.5)'
-                            : 'rgb(244 114 182 / 0.5)',
+                          currentTheme === "dark"
+                            ? "rgb(99 102 241 / 0.5)"
+                            : "rgb(244 114 182 / 0.5)",
                         borderColor:
-                          currentTheme === 'dark'
-                            ? 'rgb(99 102 241)'
-                            : 'rgb(244 114 182)',
+                          currentTheme === "dark"
+                            ? "rgb(99 102 241)"
+                            : "rgb(244 114 182)",
                         borderWidth: 2,
                       },
                     ],

@@ -1,17 +1,17 @@
-import Heading from '@/components/Heading';
-import Head from 'next/head';
-import { supabase } from '@/utils/supabase';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ProjectInterface } from '@/types';
-import TransitionPage from '@/components/TransitionPage';
+import Heading from "@/components/Heading";
+import Head from "next/head";
+import { supabase } from "@/utils/supabase";
+import Image from "next/image";
+import Link from "next/link";
+import { ProjectInterface } from "@/types";
+import TransitionPage from "@/components/TransitionPage";
 
 export async function getStaticProps() {
   const { data, error } = await supabase
-    .from('projects')
-    .select('*, images!inner(*)')
-    .eq('images.type', 'thumbnail')
-    .order('order');
+    .from("projects")
+    .select("*, images!inner(*)")
+    .eq("images.type", "thumbnail")
+    .order("order");
   if (error) {
     console.log(error);
   }
@@ -50,7 +50,7 @@ const Projects = ({ projects }: { projects: ProjectInterface[] }) => {
                     alt={project.images[0].alt}
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-lg"
+                    className="rounded-md"
                   />
                 </div>
                 <Link href={`/projects/${project.id}`}>
