@@ -25,7 +25,7 @@
   }
 
   .main-heading {
-    @apply heading-color text-4xl font-semibold sm:text-6xl;
+    @apply heading-color text-4xl font-bold sm:text-6xl;
   }
   .sub-heading {
     @apply heading-color text-2xl;

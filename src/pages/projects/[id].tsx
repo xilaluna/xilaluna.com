@@ -1,16 +1,17 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import { supabase } from '@/utils/supabase';
-import { CaretLeft, ArrowSquareOut } from 'phosphor-react';
-import { ProjectInterface } from '@/types';
-import TransitionPage from '@/components/TransitionPage';
+import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import { supabase } from "@/utils/supabase";
+import { CaretLeft, ArrowSquareOut } from "phosphor-react";
+import { ProjectInterface } from "@/types";
+import TransitionPage from "@/components/TransitionPage";
+import Heading from "@/components/Heading";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data: projects, error } = await supabase
-    .from('projects')
-    .select('id');
+    .from("projects")
+    .select("id");
   if (error) {
     console.log(error);
   }
@@ -30,10 +31,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id;
   const { data: project, error } = await supabase
-    .from('projects')
-    .select('*, links(*), images(*)')
-    .eq('id', id)
-    .order('id', { foreignTable: 'images' })
+    .from("projects")
+    .select("*, links(*), images(*)")
+    .eq("id", id)
+    .order("id", { foreignTable: "images" })
     .single();
 
   if (error) {
@@ -63,12 +64,10 @@ const Project = ({ project }: { project: ProjectInterface }) => {
 
       <TransitionPage className="secondary-page">
         <div className="flex flex-col items-center justify-center space-y-2 sm:space-y-5">
-          <h1 className="heading-color text-3xl font-semibold sm:text-4xl">
-            {project.title}
-          </h1>
+          <Heading title={project.title} subtitle={project.subtitle} />
         </div>
         <section className="flex flex-col space-y-2">
-          <Link href={'/projects'}>
+          <Link href={"/projects"}>
             <a className="link-style">
               <CaretLeft className="mb-0.5 mr-1 inline-block align-middle" />
               Back to Projects
@@ -81,7 +80,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
               return (
                 <li key={link.id}>
                   <a href={link.href} className="link-style">
-                    {link.name}{' '}
+                    {link.name}{" "}
                     <ArrowSquareOut className="mb-1 inline-block align-middle" />
                   </a>
                 </li>
@@ -98,7 +97,7 @@ const Project = ({ project }: { project: ProjectInterface }) => {
                 alt={image.alt}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-lg"
+                className="rounded-md"
               />
             </div>
           );
