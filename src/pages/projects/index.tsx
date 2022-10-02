@@ -2,8 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import TransitionPage from "@/components/TransitionPage";
-import Heading from "@/components/Heading";
+import Layout from "@/components/Layout";
 import { supabase } from "@/utils/supabase";
 import { ProjectInterface } from "@/types";
 
@@ -60,15 +59,13 @@ const Projects: NextPage<{ projects: ProjectInterface[] }> = ({ projects }) => {
         />
       </Head>
 
-      <TransitionPage className="secondary-page">
-        <Heading title="Projects" subtitle="A collection of my work" />
-
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
+      <Layout title="Projects" description="A collection of my work">
+        <section className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
           {projects.map((project) => {
             return <Project key={project.id} project={project} />;
           })}
-        </div>
-      </TransitionPage>
+        </section>
+      </Layout>
     </>
   );
 };

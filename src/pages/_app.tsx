@@ -1,10 +1,10 @@
-import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'next-themes';
-import Head from 'next/head';
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
+import Head from "next/head";
 
-import '@/styles/globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import "@/styles/globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -30,12 +30,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:type" content="website" />
       </Head>
-
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
-      </div>
+      <Navbar />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }

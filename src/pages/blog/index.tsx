@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
-import TransitionPage from "@/components/TransitionPage";
-import Heading from "@/components/Heading";
-import { allPosts, Post } from "contentlayer/generated";
-import { compareDesc, format, parseISO } from "date-fns";
 import Link from "next/link";
 import Head from "next/head";
+import { allPosts, Post } from "contentlayer/generated";
+import { compareDesc, format, parseISO } from "date-fns";
+import Layout from "@/components/Layout";
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = allPosts.sort((a, b) => {
@@ -42,14 +41,13 @@ const Blog: NextPage<{ posts: Post[] }> = ({ posts }) => {
         <meta property="og:title" content="Blog - Xila Luna" />
         <meta property="og:url" content="https://xilaluna.com/blog" />
       </Head>
-      <TransitionPage className="secondary-page">
-        <Heading title="Blog" subtitle="My personal blog" />
-        <div className="flex flex-col space-y-5">
+      <Layout title="Blog" description="My personal blog">
+        <section className="flex flex-col space-y-5">
           {posts.map((post) => (
             <PostCard key={post.url} post={post} />
           ))}
-        </div>
-      </TransitionPage>
+        </section>
+      </Layout>
     </>
   );
 };

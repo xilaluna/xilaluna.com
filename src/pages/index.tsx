@@ -1,9 +1,9 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Hero from '@/components/Hero';
-import Timeline from '@/components/Timeline';
-import GetInTouch from '@/components/GetInTouch';
-import TransitionPage from '@/components/TransitionPage';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Hero from "@/components/Hero";
+import Timeline from "@/components/Timeline";
+import GetInTouch from "@/components/GetInTouch";
+import TransitionPage from "@/components/TransitionPage";
 
 const Home: NextPage = () => {
   return (
@@ -22,10 +22,12 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <TransitionPage className="container">
-        <Hero />
-        <Timeline />
-        <GetInTouch />
+      <TransitionPage>
+        <main className="container">
+          <Hero />
+          <Timeline />
+          <GetInTouch />
+        </main>
       </TransitionPage>
     </>
   );

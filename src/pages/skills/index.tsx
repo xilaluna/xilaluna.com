@@ -12,9 +12,8 @@ import {
 import { Bar } from "react-chartjs-2";
 import { useTheme } from "next-themes";
 import { supabase } from "@/utils/supabase";
-import Heading from "@/components/Heading";
+import Layout from "@/components/Layout";
 import { SkillGroupInterface } from "@/types";
-import TransitionPage from "@/components/TransitionPage";
 
 ChartJS.register(
   CategoryScale,
@@ -73,9 +72,8 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
         />
       </Head>
 
-      <TransitionPage className="secondary-page">
-        <Heading title="Skills" subtitle="A list of my skills" />
-        <div className="space-y-5">
+      <Layout title="Skills" description="A list of my skills">
+        <section className="space-y-5">
           {skillGroup.map((group) => {
             return (
               <div key={group.name}>
@@ -104,8 +102,8 @@ const Skills = ({ skillGroup }: { skillGroup: SkillGroupInterface[] }) => {
               </div>
             );
           })}
-        </div>
-      </TransitionPage>
+        </section>
+      </Layout>
     </>
   );
 };

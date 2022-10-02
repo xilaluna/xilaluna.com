@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import { allPosts, Post } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import TransitionPage from "@/components/TransitionPage";
-import Heading from "@/components/Heading";
-import Head from "next/head";
+import Layout from "@/components/Layout";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allPosts.map((post) => post.url);
@@ -34,12 +33,11 @@ const BlogPost: NextPage<{ post: Post }> = ({ post }) => {
         <meta property="og:title" content={`${post.title} - Xila Luna`} />
         <meta property="og:url" content={`https://xilaluna.com/${post.url}`} />
       </Head>
-      <TransitionPage className="secondary-page">
-        <Heading title={post.title} subtitle={post.description} />
-        <div className="prose prose-neutral dark:prose-invert">
+      <Layout title={post.title} description={post.description}>
+        <section className="prose prose-neutral dark:prose-invert">
           <MDX />
-        </div>
-      </TransitionPage>
+        </section>
+      </Layout>
     </>
   );
 };

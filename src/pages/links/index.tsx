@@ -1,6 +1,7 @@
-import type { NextPage } from 'next';
-import Link from 'next/link';
-import Head from 'next/head';
+import React from "react";
+import type { NextPage } from "next";
+import Link from "next/link";
+import Head from "next/head";
 import {
   PaperPlaneTilt,
   House,
@@ -8,10 +9,8 @@ import {
   LinkedinLogo,
   StackOverflowLogo,
   Coffee,
-} from 'phosphor-react';
-import Heading from '@/components/Heading';
-import TransitionPage from '@/components/TransitionPage';
-import React from 'react';
+} from "phosphor-react";
+import Layout from "@/components/Layout";
 
 const Links: NextPage = () => {
   return (
@@ -27,11 +26,9 @@ const Links: NextPage = () => {
         />
       </Head>
 
-      <TransitionPage className="secondary-page">
-        <Heading title="Links" subtitle="@xilaluna" />
-
-        <div className="flex flex-col items-center justify-center space-y-5">
-          <Link href={'/'}>
+      <Layout title="Links" description="@xilaluna">
+        <section className="flex flex-col items-center justify-center space-y-5">
+          <Link href={"/"}>
             <ButtonLink
               href="https://xilaluna.com/"
               Icon={<House />}
@@ -58,8 +55,8 @@ const Links: NextPage = () => {
             Icon={<Coffee />}
             text="Buy Me A Coffee"
           />
-        </div>
-      </TransitionPage>
+        </section>
+      </Layout>
     </>
   );
 };
@@ -81,7 +78,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({ href, Icon, text }) => {
       rel="noopener noreferrer"
     >
       {React.cloneElement(Icon, {
-        className: 'mb-0.5 mr-2 inline-block h-5 w-5 align-middle',
+        className: "mb-0.5 mr-2 inline-block h-5 w-5 align-middle",
       })}
       {text}
     </a>
