@@ -1,24 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CaretRight } from "phosphor-react";
+import profilePic from "public/images/profile-pic.png";
 
 const Hero: React.FC = () => {
   return (
     <section className="flex min-h-[95vh] flex-col items-center justify-center space-y-2 pb-12 sm:space-y-4 sm:pb-28">
       <div className="relative h-44 w-44 sm:h-64 sm:w-64 ">
         <Image
-          src={
-            "https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/profile-picture.jpg"
-          }
+          src={profilePic}
           alt="Profile Image"
           layout="fill"
           objectFit="cover"
           className="rounded-full"
           priority={true}
           placeholder="blur"
-          blurDataURL={
-            "https://paydmgjryegxnlsxvqke.supabase.co/storage/v1/object/public/public/images/profile-picture.jpg"
-          }
         />
       </div>
       <h1 className="main-heading">Xila Luna</h1>
