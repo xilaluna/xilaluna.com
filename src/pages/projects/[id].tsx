@@ -94,6 +94,8 @@ const Project = ({ project }: { project: ProjectInterface }) => {
                 layout="fill"
                 objectFit="cover"
                 className="rounded-md"
+                placeholder="blur"
+                blurDataURL={image.src}
               />
             </div>
           );

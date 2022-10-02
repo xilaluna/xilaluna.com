@@ -34,6 +34,8 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             layout="fill"
             objectFit="cover"
             className="rounded-md"
+            placeholder="blur"
+            blurDataURL={project.images[0].src}
           />
         </div>
         <h2 className="heading-color link-style pt-2 text-xl hover:cursor-pointer">

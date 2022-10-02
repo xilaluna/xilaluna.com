@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 
 interface TransitionPageProps {
   children: React.ReactNode;
-  className?: string;
 }
 
 const TransitionPage: React.FC<TransitionPageProps> = ({ children }) => {
@@ -16,12 +15,12 @@ const TransitionPage: React.FC<TransitionPageProps> = ({ children }) => {
     <Transition
       show={show}
       enter="transition-all duration-700 ease-out"
-      enterFrom="opacity-0 translate-y-10"
+      enterFrom="opacity-0 translate-y-16"
       enterTo="opacity-100 translate-y-0"
       leave="transition-all duration-700 ease-in"
       leaveFrom="opacity-100 translate-y-0"
-      leaveTo="opacity-0 translate-y-10"
-      className="flex min-h-screen flex-col "
+      leaveTo="opacity-0 translate-y-16"
+      className="flex min-h-screen flex-col"
     >
       {children}
       <Footer />
