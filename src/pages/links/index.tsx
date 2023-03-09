@@ -28,13 +28,7 @@ const Links: NextPage = () => {
 
       <Layout title="Links" description="@xilaluna">
         <section className="flex flex-col items-center justify-center space-y-5">
-          <Link href={"/"}>
-            <ButtonLink
-              href="https://xilaluna.com/"
-              Icon={<House />}
-              text="Personal Website"
-            />
-          </Link>
+        
           <ButtonLink
             href="mailto:xilaluna2@gmail.com"
             Icon={<PaperPlaneTilt />}
