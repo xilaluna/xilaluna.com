@@ -47,7 +47,7 @@ const Links: NextPage = () => {
           <ButtonLink
             href="https://www.buymeacoffee.com/xilaluna"
             Icon={<Coffee />}
-            text="Buy Me A Coffee"
+            text="Buy me a coffee"
           />
         </section>
       </Layout>
