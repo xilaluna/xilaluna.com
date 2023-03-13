@@ -29,6 +29,15 @@ const { title } = Astro.props;
       </nav>
     </header>
     <slot />
+    <footer
+      class="mx-auto max-w-screen-sm px-4 sm:px-0 py-5 flex justify-center items-center border-t"
+    >
+      <p>
+        {"Copyright © "}
+        {new Date().getFullYear()}
+        {" Xila Luna"}
+      </p>
+    </footer>
   </body>
 </html>
 <style is:global>
