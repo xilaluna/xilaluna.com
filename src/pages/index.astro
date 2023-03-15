@@ -5,37 +5,95 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="mx-auto max-w-screen-sm px-4 sm:px-0">
-    <img src="/images/profile-picture.jpg" alt="main picture" />
-    <h1 class="text-center">Xila Luna</h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
+  <main class="mx-auto max-w-screen-sm px-4 sm:px-0 border-neutral-400">
+    <!-- hero section -->
+    <section class="py-10 flex items-center flex-col space-y-5">
+      <img
+        src="/images/profile-picture.jpg"
+        alt="main picture"
+        class="rounded-full h-64 w-64"
       />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <Icon pack="mdi" name="account" />
+      <h1 class="text-5xl">Xila Luna</h1>
+      <p class="text-center">
+        Xila Luna is a creative full-stack engineer who is willing and able to
+        find solutions when there are none.
+      </p>
+    </section>
 
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <div class="w-full border-b border-neutral-400"></div>
+
+    <!-- about section -->
+    <section class="flex flex-col py-10">
+      <div class="flex space-x-2 sm:space-x-4">
+        <div class="flex flex-col items-center justify-center">
+          <p>2022</p>
+          <div class="border-color h-full w-px border-l"></div>
+        </div>
+        <div class="flex flex-col space-y-5 pb-5">
+          <p>
+            Developed full-stack MERN application while a part of{" "}
+            <a href="https://www.joincolab.io/" class="link-style"> Co.Lab</a>
+            .
+          </p>
+          <p>
+            Graduated from{" "}
+            <a class="link-style" href="https://www.dominican.edu/">
+              Dominican University of California
+            </a>{" "}
+            with a bachelor&apos;s degree in computer science.
+          </p>
+        </div>
+      </div>
+      <div class="flex space-x-2 sm:space-x-4">
+        <div class="flex flex-col items-center justify-center">
+          <p>2020</p>
+          <div class="border-color h-full w-px border-l"></div>
+        </div>
+        <div class="flex flex-col space-y-5 pb-5">
+          <p>Graduated from Berkeley High School.</p>
+          <p>
+            Completed{" "}
+            <a class="link-style" href="https://codenation.org/">
+              Code Nation
+            </a>{" "}
+            Pandora program.
+          </p>
+          <p>
+            Participant of{" "}
+            <a
+              class="link-style"
+              href="https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute"
+            >
+              Google&apos;s Computer Science Summer Institute
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+      <div class="flex space-x-2 sm:space-x-4">
+        <div class="flex flex-col items-center justify-center">
+          <p>2019</p>
+          <div class="border-color h-full w-px border-l"></div>
+        </div>
+        <div class="flex flex-col space-y-5 pb-5">
+          <p>
+            Joined my High School&apos;s Robotics Club{" "}
+            <a class="link-style" href="https://team5419.org/">
+              Team 5419 Berkelium
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+      <div class="flex space-x-2 sm:space-x-4">
+        <div class="flex flex-col items-center justify-center">
+          <p>2018</p>
+          <div class="border-color h-full w-px border-l"></div>
+        </div>
+        <div class="flex flex-col">
+          <p>Wrote my first line of code.</p>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
