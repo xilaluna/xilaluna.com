@@ -28,11 +28,21 @@ const { title } = Astro.props;
       <nav
         class="mx-auto max-w-screen-sm px-4 sm:px-0 flex justify-between items-center border-b py-5 border-neutral-400"
       >
-        <Icon name="ph:house" class="h-6 w-6" />
-        <Icon name="ph:rocket-launch" class="h-6 w-6" />
-        <Icon name="ph:brain" class="h-6 w-6" />
-        <Icon name="ph:newspaper" class="h-6 w-6" />
-        <Icon name="ph:link" class="h-6 w-6" />
+        <a href="/">
+          <Icon name="ph:house" class="h-6 w-6" />
+        </a>
+        <a href="/projects/">
+          <Icon name="ph:rocket-launch" class="h-6 w-6" />
+        </a>
+        <a href="/skills/">
+          <Icon name="ph:brain" class="h-6 w-6" />
+        </a>
+        <a href="/blog/">
+          <Icon name="ph:newspaper" class="h-6 w-6" />
+        </a>
+        <a href="/links/">
+          <Icon name="ph:link" class="h-6 w-6" />
+        </a>
       </nav>
     </header>
     <slot />
