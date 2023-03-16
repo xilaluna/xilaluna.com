@@ -47,12 +47,18 @@ const { title } = Astro.props;
     </header>
     <slot />
     <footer
-      class="mx-auto max-w-screen-sm px-4 sm:px-0 py-5 flex justify-center items-center border-t border-neutral-400"
+      class="mx-auto max-w-screen-sm px-4 sm:px-0 py-5 flex justify-between items-center border-t border-neutral-400"
     >
       <p>
         {"Copyright © "}
         {new Date().getFullYear()}
         {" Xila Luna"}
+      </p>
+      <p>
+        Source <Icon
+          name="ph:star"
+          class="inline-block h-5 w-5 align-middle mb-0.5"
+        />
       </p>
     </footer>
   </body>
