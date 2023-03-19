@@ -29,19 +29,19 @@ const { title } = Astro.props;
         class="mx-auto max-w-screen-sm px-4 sm:px-0 flex justify-between items-center border-b py-5 border-neutral-400"
       >
         <a href="/">
-          <Icon name="ph:house" class="h-6 w-6" />
+          <Icon name="ph:house" class="icon-style" />
         </a>
         <a href="/projects/">
-          <Icon name="ph:rocket-launch" class="h-6 w-6" />
+          <Icon name="ph:rocket-launch" class="icon-style" />
         </a>
         <a href="/skills/">
-          <Icon name="ph:brain" class="h-6 w-6" />
+          <Icon name="ph:brain" class="icon-style" />
         </a>
         <a href="/blog/">
-          <Icon name="ph:newspaper" class="h-6 w-6" />
+          <Icon name="ph:newspaper" class="icon-style" />
         </a>
         <a href="/links/">
-          <Icon name="ph:link" class="h-6 w-6" />
+          <Icon name="ph:link" class="icon-style" />
         </a>
       </nav>
     </header>
@@ -63,3 +63,8 @@ const { title } = Astro.props;
     </footer>
   </body>
 </html>
+<style>
+  .icon-style {
+    @apply hover:text-pink-400 h-6 w-6;
+  }
+</style>

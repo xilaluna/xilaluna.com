@@ -1,0 +1,20 @@
+---
+import Layout from "./Layout.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props as Props;
+---
+
+<Layout title={title}>
+  <main class="mx-auto max-w-screen-sm px-4 sm:px-0">
+    <section class="flex flex-col items-center space-y-5 py-10">
+      <h1 class="text-5xl font-bold">{title}</h1>
+      <p>{description}</p>
+    </section>
+    <slot />
+  </main>
+</Layout>
