@@ -117,5 +117,49 @@ import Card from "../components/Card.astro";
         </div>
       </div>
     </section>
+
+    <div class="w-full border-b border-neutral-400"></div>
+
+    <!-- projects section -->
+    <section class="py-10 space-y-5">
+      <h2 class="text-3xl font-bold text-center">Featured Work</h2>
+      <ul class="space-y-5">
+        <li>
+          <a
+            href="https://github.com/BoringStocks/BoringStocks"
+            class="inline-block"
+          >
+            <h2 class="text-lg text-skin-accent hover:underline">
+              BoringStocks
+            </h2>
+          </a>
+          <p>
+            A minimalistic stock information website for the average trader.
+          </p>
+        </li>
+        <li>
+          <a
+            href="https://github.com/xilaluna/fentanyl-epidemic-tracker"
+            class="inline-block"
+          >
+            <h2 class="text-lg text-skin-accent hover:underline">
+              Fentanyl Epidemic Tracker
+            </h2>
+          </a>
+          <p>
+            A Go scraper that pulls fentanyl articles to follow the fentanyl
+            epidemic trend
+          </p>
+        </li>
+      </ul>
+      <p class="text-center hover:text-skin-accent">
+        <a href="/projects/"
+          >All Projects <Icon
+            name="ph:caret-right"
+            class="inline-block h-5 w-5 align-middle mb-0.5"
+          /></a
+        >
+      </p>
+    </section>
   </main>
 </Layout>
