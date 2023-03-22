@@ -1,0 +1,29 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import { Icon } from "astro-icon";
+const allPosts = await Astro.glob("./*.md");
+---
+
+<PageLayout title="Blog" description="My personal blog">
+  <ul class="">
+    {
+      allPosts.map((post) => {
+        return (
+          <li class="">
+            <a href={post.url}>
+              <h2 class="text-lg ">{post.frontmatter.title}</h2>
+            </a>
+            <div>
+              <Icon
+                name="ph:calendar-blank"
+                class="inline-block h-5 w-5 align-middle mb-0.5"
+              />
+              {post.frontmatter.date}
+            </div>
+            <p>{post.frontmatter.description}</p>
+          </li>
+        );
+      })
+    }
+  </ul>
+</PageLayout>

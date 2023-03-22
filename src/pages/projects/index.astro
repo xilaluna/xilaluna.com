@@ -1,0 +1,19 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+const allProjects = await Astro.glob("./*.md");
+---
+
+<PageLayout title="Projects" description="A collection of my work">
+  <ul>
+    {
+      allProjects.map((project) => {
+        return (
+          <li>
+            <h2>{project.frontmatter.title}</h2>
+            <p>{project.frontmatter.description}</p>
+          </li>
+        );
+      })
+    }
+  </ul>
+</PageLayout>
