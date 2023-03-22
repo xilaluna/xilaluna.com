@@ -1,16 +1,40 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
-const allProjects = await Astro.glob("./*.md");
+
+const projects = [
+  {
+    title: "BoringStocks",
+    description:
+      "A minimalistic stock information website for the average trader.",
+    link: "https://github.com/BoringStocks/BoringStocks"
+  },
+  {
+    title: "Fentanyl Epidemic Tracker",
+    description:
+      "A Go scraper that pulls fentanyl articles to follow the fentanyl epidemic trend",
+    link: "https://github.com/xilaluna/fentanyl-epidemic-tracker"
+  },
+  {
+    title: "CoinStamp",
+    description:
+      "Use decentralized currencies to buy and print your postage today.",
+    link: "https://github.com/xilaluna/coinstamp"
+  },
+];
 ---
 
 <PageLayout title="Projects" description="A collection of my work">
-  <ul>
+  <ul class="space-y-5 pb-10">
     {
-      allProjects.map((project) => {
+      projects.map((project) => {
         return (
           <li>
-            <h2>{project.frontmatter.title}</h2>
-            <p>{project.frontmatter.description}</p>
+            <a href={} class="inline-block">
+              <h2 class="text-lg text-skin-accent hover:underline">
+                {project.title}
+              </h2>
+            </a>
+            <p>{project.description}</p>
           </li>
         );
       })
