@@ -10,10 +10,12 @@ const allPosts = await Astro.glob("./*.md");
       allPosts.map((post) => {
         return (
           <li class="">
-            <a href={post.url}>
-              <h2 class="text-lg ">{post.frontmatter.title}</h2>
+            <a href={post.url} class="inline-block">
+              <h2 class="text-lg text-skin-accent hover:underline">
+                {post.frontmatter.title}
+              </h2>
             </a>
-            <div>
+            <div class="italic text-skin-muted">
               <Icon
                 name="ph:calendar-blank"
                 class="inline-block h-5 w-5 align-middle mb-0.5"

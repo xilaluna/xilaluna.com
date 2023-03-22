@@ -4,6 +4,12 @@
 
 @layer base {
   body {
-    @apply bg-neutral-100 font-mono;
+    @apply bg-skin-fill text-skin-base font-mono;
+  }
+  :root {
+    --color-text-base: 38, 38, 38;
+    --color-accent: 236, 72, 153;
+    --color-muted: 163, 163, 163;
+    --color-fill: 245, 245, 245;
   }
 }
