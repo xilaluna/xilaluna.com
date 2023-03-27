@@ -22,96 +22,60 @@ import Card from "../components/Card.astro";
 
     <div class="w-full border-b border-neutral-400"></div>
 
-    <!-- about section -->
-    <section class="space-y-5 py-10">
-      <h2 class="text-3xl font-bold text-center">Timeline</h2>
+    <!-- timeline section -->
+    <section class="py-10 space-y-5">
       <div>
-        <div class="flex space-x-2 sm:space-x-4">
-          <div class="flex flex-col items-center justify-center">
-            <p>2022</p>
-            <div class="border-color h-full w-px border-l border-skin-base">
-            </div>
+        <h2 class="secondary-heading">Timeline</h2>
+      </div>
+      <div class="space-y-2">
+        <!-- 2022 -->
+        <div class="flex gap-8">
+          <div>
+            <h3 class="font-semibold">2022</h3>
           </div>
-          <div class="flex flex-col space-y-5 pb-5">
+          <div class="space-y-2">
             <p>
-              Developed full-stack MERN application while a part of{" "}
-              <a
-                href="https://www.joincolab.io/"
-                class="text-skin-accent hover:underline"
-              >
-                Co.Lab</a
+              Developed full-stack MERN application while a part of <span
+                class="text-skin-accent">Co.Lab</span
               >
             </p>
             <p>
-              Graduated from{" "}
-              <a
-                class="text-skin-accent hover:underline"
-                href="https://www.dominican.edu/"
-              >
-                Dominican University of California
-              </a>{" "}
-              with a bachelor&apos;s degree in computer science
+              Graduated from Dominican University of California with a
+              bachelor&apos;s degree in computer science
             </p>
             <p>
-              Started Volunteering with CodeNation to help students learn web
+              Started volunteering with CodeNation to help students learn web
               development
             </p>
+            <p>Started IT consulting at GeekSquad BestBuy</p>
           </div>
         </div>
-        <div class="flex space-x-2 sm:space-x-4">
-          <div class="flex flex-col items-center justify-center">
-            <p>2020</p>
-            <div class="border-color h-full w-px border-l border-skin-base">
-            </div>
+        <!-- 2020 -->
+        <div class="flex gap-8">
+          <div>
+            <h3 class="font-semibold">2020</h3>
           </div>
-          <div class="flex flex-col space-y-5 pb-5">
+          <div class="space-y-2">
             <p>Graduated from Berkeley High School</p>
-            <p>
-              Completed{" "}
-              <a
-                class="text-skin-accent hover:underline"
-                href="https://codenation.org/"
-              >
-                Code Nation
-              </a>{" "}
-              Pandora program
-            </p>
-            <p>
-              Participant of{" "}
-              <a
-                class="text-skin-accent hover:underline"
-                href="https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute"
-              >
-                Google&apos;s Computer Science Summer Institute
-              </a>
-            </p>
+            <p>Completed Code Nation Pandora program</p>
+            <p>Participant of Google's Computer Science Summer Institute</p>
           </div>
         </div>
-        <div class="flex space-x-2 sm:space-x-4">
-          <div class="flex flex-col items-center justify-center">
-            <p>2019</p>
-            <div class="border-color h-full w-px border-l border-skin-base">
-            </div>
+        <!-- 2019 -->
+        <div class="flex gap-8">
+          <div>
+            <h3 class="font-semibold">2019</h3>
           </div>
-          <div class="flex flex-col space-y-5 pb-5">
-            <p>
-              Joined my High School&apos;s Robotics Club{" "}
-              <a
-                class="text-skin-accent hover:underline"
-                href="https://team5419.org/"
-              >
-                Team 5419 Berkelium
-              </a>
-            </p>
+          <div class="space-y-2">
+            <p>Joined my High School's Robotics Club Team 5419 Berkelium</p>
           </div>
         </div>
-        <div class="flex space-x-2 sm:space-x-4">
-          <div class="flex flex-col items-center justify-center">
-            <p>2018</p>
-            <div class="border-color h-full w-px border-l border-skin-base">
-            </div>
+        <!-- 2018 -->
+        <div class="flex gap-8">
+          <div>
+            <h3 class="font-semibold">2018</h3>
           </div>
-          <div class="flex flex-col">
+          <div class="space-y-2">
             <p>Wrote my first line of code</p>
           </div>
         </div>
@@ -122,7 +86,7 @@ import Card from "../components/Card.astro";
 
     <!-- projects section -->
     <section class="py-10 space-y-5">
-      <h2 class="text-3xl font-bold text-center">Featured Work</h2>
+      <h2 class="secondary-heading">Featured Work</h2>
       <ul class="space-y-5">
         <li>
           <a
@@ -163,3 +127,8 @@ import Card from "../components/Card.astro";
     </section>
   </main>
 </Layout>
+<style>
+  .secondary-heading {
+    @apply text-3xl font-bold text-center;
+  }
+</style>
