@@ -13,7 +13,7 @@ import Card from "../components/Card.astro";
         alt="main picture"
         class="h-64 w-64 rounded-full"
       />
-      <h1 class="text-5xl font-bold">Xila Luna</h1>
+      <h1 class="text-5xl font-bold text-skin-emphasis">Xila Luna</h1>
       <p class="text-center">
         Xila Luna is a creative full-stack engineer who is willing and able to
         find solutions when there are none.
@@ -41,12 +41,12 @@ import Card from "../components/Card.astro";
         <!-- 2022 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold">2022</h3>
+            <h3 class="font-semibold text-skin-emphasis">2022</h3>
           </div>
           <div class="space-y-2">
             <p>
               Developed full-stack MERN application while a part of <span
-                class="text-skin-accent">Co.Lab</span
+                class="link">Co.Lab</span
               >
             </p>
             <p>
@@ -63,7 +63,7 @@ import Card from "../components/Card.astro";
         <!-- 2020 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold">2020</h3>
+            <h3 class="font-semibold text-skin-emphasis">2020</h3>
           </div>
           <div class="space-y-2">
             <p>Graduated from Berkeley High School</p>
@@ -74,7 +74,7 @@ import Card from "../components/Card.astro";
         <!-- 2019 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold">2019</h3>
+            <h3 class="font-semibold text-skin-emphasis">2019</h3>
           </div>
           <div class="space-y-2">
             <p>Joined my High School's Robotics Club Team 5419 Berkelium</p>
@@ -83,7 +83,7 @@ import Card from "../components/Card.astro";
         <!-- 2018 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold">2018</h3>
+            <h3 class="font-semibold text-skin-emphasis">2018</h3>
           </div>
           <div class="space-y-2">
             <p>Wrote my first line of code</p>
@@ -139,6 +139,9 @@ import Card from "../components/Card.astro";
 </Layout>
 <style>
   .secondary-heading {
-    @apply text-center text-3xl font-bold;
+    @apply text-center text-3xl font-bold text-skin-emphasis;
+  }
+  .link {
+    @apply text-skin-accent hover:text-skin-accent-hover hover:underline;
   }
 </style>

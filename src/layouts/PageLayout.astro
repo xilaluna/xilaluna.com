@@ -12,7 +12,7 @@ const { title, description } = Astro.props as Props;
 <Layout title={title}>
   <main class="mx-auto max-w-screen-sm space-y-10 px-4 py-10 sm:px-0">
     <section class="flex flex-col items-center space-y-2">
-      <h1 class="text-4xl font-bold">{title}</h1>
+      <h1 class="text-4xl font-bold text-skin-emphasis">{title}</h1>
       <p class="italic text-skin-muted">{description}</p>
     </section>
     <slot />

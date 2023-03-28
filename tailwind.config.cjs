@@ -20,7 +20,9 @@ module.exports = {
       textColor: {
         skin: {
           base: withOpacity("--color-text-base"),
+          emphasis: withOpacity("--color-fill-inverse"),
           accent: withOpacity("--color-accent"),
+          "accent-hover": withOpacity("--color-accent-hover"),
           muted: withOpacity("--color-muted"),
           inverted: withOpacity("--color-fill"),
         },
@@ -29,6 +31,7 @@ module.exports = {
         skin: {
           fill: withOpacity("--color-fill"),
           accent: withOpacity("--color-accent"),
+          inverted: withOpacity("--color-fill-inverse"),
         },
       },
       borderColor: {

@@ -10,14 +10,18 @@
   html[data-theme="light"] {
     --color-text-base: 38, 38, 38;
     --color-accent: 244, 114, 182;
+    --color-accent-hover: 236, 72, 153;
     --color-muted: 163, 163, 163;
     --color-fill: 245, 245, 245;
+    --color-fill-inverse: 23, 23, 23;
   }
   html[data-theme="dark"] {
     --color-text-base: 163, 163, 163;
     --color-accent: 167, 139, 250;
+    --color-accent-hover: 168, 85, 247;
     --color-muted: 82, 82, 82;
     --color-fill: 23, 23, 23;
+    --color-fill-inverse: 245, 245, 245;
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
