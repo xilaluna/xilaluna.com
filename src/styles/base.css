@@ -6,10 +6,25 @@
   body {
     @apply bg-skin-fill font-mono text-skin-base;
   }
-  :root {
+  :root,
+  html[data-theme="light"] {
     --color-text-base: 38, 38, 38;
-    --color-accent: 236, 72, 153;
+    --color-accent: 244, 114, 182;
     --color-muted: 163, 163, 163;
     --color-fill: 245, 245, 245;
+  }
+  html[data-theme="dark"] {
+    --color-text-base: 163, 163, 163;
+    --color-accent: 167, 139, 250;
+    --color-muted: 82, 82, 82;
+    --color-fill: 23, 23, 23;
+  }
+  #sun-svg,
+  html[data-theme="dark"] #moon-svg {
+    display: none;
+  }
+  #moon-svg,
+  html[data-theme="dark"] #sun-svg {
+    display: block;
   }
 }
