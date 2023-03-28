@@ -11,14 +11,14 @@ const allPosts = await Astro.glob("./*.md");
         return (
           <li class="">
             <a href={post.url} class="inline-block">
-              <h2 class="text-lg text-skin-accent hover:underline">
+              <h2 class="text-skin-accent text-lg hover:underline">
                 {post.frontmatter.title}
               </h2>
             </a>
-            <div class="italic text-skin-muted">
+            <div class="text-skin-muted italic">
               <Icon
                 name="ph:calendar-blank"
-                class="inline-block h-5 w-5 align-middle mb-0.5"
+                class="mb-0.5 inline-block h-5 w-5 align-middle"
               />
               {post.frontmatter.date}
             </div>

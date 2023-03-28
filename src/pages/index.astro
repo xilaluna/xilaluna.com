@@ -7,29 +7,39 @@ import Card from "../components/Card.astro";
 <Layout title="Welcome to Astro.">
   <main class="mx-auto max-w-screen-sm px-4 sm:px-0">
     <!-- hero section -->
-    <section class="py-10 flex items-center flex-col space-y-5">
+    <section class="flex flex-col items-center space-y-5 py-10">
       <img
         src="/images/profile-picture.jpg"
         alt="main picture"
-        class="rounded-full h-64 w-64"
+        class="h-64 w-64 rounded-full"
       />
       <h1 class="text-5xl font-bold">Xila Luna</h1>
       <p class="text-center">
         Xila Luna is a creative full-stack engineer who is willing and able to
         find solutions when there are none.
       </p>
+      <div>
+        <a href="/links/" class="rounded bg-skin-accent p-3 text-skin-inverted"
+          >Contact Me</a
+        >
+        <a
+          href="/blog/hello-world/"
+          class="rounded border border-skin-accent p-3 text-skin-accent"
+          >About Me</a
+        >
+      </div>
     </section>
 
-    <div class="w-full border-b border-neutral-400"></div>
+    <div class="w-full border-b border-skin-base"></div>
 
     <!-- timeline section -->
-    <section class="py-10 space-y-5">
+    <section class="space-y-5 py-10">
       <div>
         <h2 class="secondary-heading">Timeline</h2>
       </div>
       <div class="space-y-2">
         <!-- 2022 -->
-        <div class="flex gap-8">
+        <div class="flex gap-5">
           <div>
             <h3 class="font-semibold">2022</h3>
           </div>
@@ -51,7 +61,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <!-- 2020 -->
-        <div class="flex gap-8">
+        <div class="flex gap-5">
           <div>
             <h3 class="font-semibold">2020</h3>
           </div>
@@ -62,7 +72,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <!-- 2019 -->
-        <div class="flex gap-8">
+        <div class="flex gap-5">
           <div>
             <h3 class="font-semibold">2019</h3>
           </div>
@@ -71,7 +81,7 @@ import Card from "../components/Card.astro";
           </div>
         </div>
         <!-- 2018 -->
-        <div class="flex gap-8">
+        <div class="flex gap-5">
           <div>
             <h3 class="font-semibold">2018</h3>
           </div>
@@ -82,10 +92,10 @@ import Card from "../components/Card.astro";
       </div>
     </section>
 
-    <div class="w-full border-b border-neutral-400"></div>
+    <div class="w-full border-b border-skin-base"></div>
 
     <!-- projects section -->
-    <section class="py-10 space-y-5">
+    <section class="space-y-5 py-10">
       <h2 class="secondary-heading">Featured Work</h2>
       <ul class="space-y-5">
         <li>
@@ -120,7 +130,7 @@ import Card from "../components/Card.astro";
         <a href="/projects/"
           >All Projects <Icon
             name="ph:caret-right"
-            class="inline-block h-5 w-5 align-middle mb-0.5"
+            class="mb-0.5 inline-block h-5 w-5 align-middle"
           /></a
         >
       </p>
@@ -129,6 +139,6 @@ import Card from "../components/Card.astro";
 </Layout>
 <style>
   .secondary-heading {
-    @apply text-3xl font-bold text-center;
+    @apply text-center text-3xl font-bold;
   }
 </style>

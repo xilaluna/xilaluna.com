@@ -22,16 +22,19 @@ module.exports = {
           base: withOpacity("--color-text-base"),
           accent: withOpacity("--color-accent"),
           muted: withOpacity("--color-muted"),
+          inverted: withOpacity("--color-fill"),
         },
       },
       backgroundColor: {
         skin: {
           fill: withOpacity("--color-fill"),
+          accent: withOpacity("--color-accent"),
         },
       },
       borderColor: {
         skin: {
           base: withOpacity("--color-muted"),
+          accent: withOpacity("--color-accent"),
         },
       },
     },

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-skin-fill text-skin-base font-mono;
+    @apply bg-skin-fill font-mono text-skin-base;
   }
   :root {
     --color-text-base: 38, 38, 38;

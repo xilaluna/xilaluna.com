@@ -5,12 +5,12 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <main class="mx-auto max-w-screen-sm px-4 sm:px-0">
-    <section class="flex flex-col space-y-5 py-10">
-      <h1 class="text-5xl font-bold">{frontmatter.title}</h1>
-      <p>{frontmatter.description}</p>
+  <main class="mx-auto max-w-screen-sm space-y-10 px-4 py-10 sm:px-0">
+    <section class="flex flex-col items-center space-y-2">
+      <h1 class="text-4xl font-bold">{frontmatter.title}</h1>
+      <p class="italic text-skin-muted">{frontmatter.description}</p>
     </section>
-    <section class="py-10">
+    <section>
       <slot />
     </section>
   </main>
