@@ -31,6 +31,7 @@ module.exports = {
         skin: {
           fill: withOpacity("--color-fill"),
           accent: withOpacity("--color-accent"),
+          "accent-hover": withOpacity("--color-accent-hover"),
           inverted: withOpacity("--color-fill-inverse"),
         },
       },
@@ -38,6 +39,7 @@ module.exports = {
         skin: {
           base: withOpacity("--color-muted"),
           accent: withOpacity("--color-accent"),
+          "accent-hover": withOpacity("--color-accent-hover"),
         },
       },
     },
