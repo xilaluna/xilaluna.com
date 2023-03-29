@@ -1,0 +1,129 @@
+import * as devalue from "devalue";
+import { extname } from "node:path";
+import { pathToFileURL } from "url";
+import { AstroErrorData } from "../core/errors/errors-data.js";
+import { AstroError } from "../core/errors/errors.js";
+import { escapeViteEnvReferences, getFileInfo } from "../vite-plugin-utils/index.js";
+import { CONTENT_FLAG } from "./consts.js";
+import {
+  getContentEntryExts,
+  getContentPaths,
+  getEntryData,
+  getEntryInfo,
+  getEntrySlug,
+  getEntryType,
+  globalContentConfigObserver,
+  patchAssets
+} from "./utils.js";
+function isContentFlagImport(viteId, contentEntryExts) {
+  const { searchParams, pathname } = new URL(viteId, "file://");
+  return searchParams.has(CONTENT_FLAG) && contentEntryExts.some((ext) => pathname.endsWith(ext));
+}
+function astroContentImportPlugin({
+  fs,
+  settings
+}) {
+  const contentPaths = getContentPaths(settings.config, fs);
+  const contentEntryExts = getContentEntryExts(settings);
+  const contentEntryExtToParser = /* @__PURE__ */ new Map();
+  for (const entryType of settings.contentEntryTypes) {
+    for (const ext of entryType.extensions) {
+      contentEntryExtToParser.set(ext, entryType);
+    }
+  }
+  return {
+    name: "astro:content-imports",
+    async load(id) {
+      const { fileId } = getFileInfo(id, settings.config);
+      if (isContentFlagImport(id, contentEntryExts)) {
+        const observable = globalContentConfigObserver.get();
+        if (observable.status === "init") {
+          throw new AstroError({
+            ...AstroErrorData.UnknownContentCollectionError,
+            message: "Content config failed to load."
+          });
+        }
+        if (observable.status === "error") {
+          throw observable.error;
+        }
+        let contentConfig = observable.status === "loaded" ? observable.config : void 0;
+        if (observable.status === "loading") {
+          contentConfig = await new Promise((resolve) => {
+            const unsubscribe = globalContentConfigObserver.subscribe((ctx) => {
+              if (ctx.status === "loaded") {
+                resolve(ctx.config);
+                unsubscribe();
+              } else if (ctx.status === "error") {
+                resolve(void 0);
+                unsubscribe();
+              }
+            });
+          });
+        }
+        const rawContents = await fs.promises.readFile(fileId, "utf-8");
+        const fileExt = extname(fileId);
+        if (!contentEntryExtToParser.has(fileExt)) {
+          throw new AstroError({
+            ...AstroErrorData.UnknownContentCollectionError,
+            message: `No parser found for content entry ${JSON.stringify(
+              fileId
+            )}. Did you apply an integration for this file type?`
+          });
+        }
+        const contentEntryParser = contentEntryExtToParser.get(fileExt);
+        const info = await contentEntryParser.getEntryInfo({
+          fileUrl: pathToFileURL(fileId),
+          contents: rawContents
+        });
+        const generatedInfo = getEntryInfo({
+          entry: pathToFileURL(fileId),
+          contentDir: contentPaths.contentDir
+        });
+        if (generatedInfo instanceof Error)
+          return;
+        const _internal = { filePath: fileId, rawData: info.rawData };
+        const slug = getEntrySlug({ ...generatedInfo, unvalidatedSlug: info.slug });
+        const collectionConfig = contentConfig == null ? void 0 : contentConfig.collections[generatedInfo.collection];
+        let data = collectionConfig ? await getEntryData(
+          { ...generatedInfo, _internal, unvalidatedData: info.data },
+          collectionConfig
+        ) : info.data;
+        await patchAssets(data, this.meta.watchMode, this.emitFile, settings);
+        const code = escapeViteEnvReferences(`
+export const id = ${JSON.stringify(generatedInfo.id)};
+export const collection = ${JSON.stringify(generatedInfo.collection)};
+export const slug = ${JSON.stringify(slug)};
+export const body = ${JSON.stringify(info.body)};
+export const data = ${devalue.uneval(data)};
+export const _internal = {
+	filePath: ${JSON.stringify(_internal.filePath)},
+	rawData: ${JSON.stringify(_internal.rawData)},
+};
+`);
+        return { code };
+      }
+    },
+    configureServer(viteServer) {
+      viteServer.watcher.on("all", async (event, entry) => {
+        if (["add", "unlink", "change"].includes(event) && getEntryType(entry, contentPaths, contentEntryExts) === "config") {
+          for (const modUrl of viteServer.moduleGraph.urlToModuleMap.keys()) {
+            if (isContentFlagImport(modUrl, contentEntryExts)) {
+              const mod = await viteServer.moduleGraph.getModuleByUrl(modUrl);
+              if (mod) {
+                viteServer.moduleGraph.invalidateModule(mod);
+              }
+            }
+          }
+        }
+      });
+    },
+    async transform(code, id) {
+      if (isContentFlagImport(id, contentEntryExts)) {
+        return { code: escapeViteEnvReferences(code) };
+      }
+    }
+  };
+}
+export {
+  astroContentImportPlugin
+};
