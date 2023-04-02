@@ -1,15 +1,13 @@
 ---
 import Layout from "./Layout.astro";
+import Heading from "../components/Heading.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title} activeNav="blog">
   <main class="mx-auto max-w-screen-sm space-y-10 px-4 py-10 sm:px-0">
-    <section class="flex flex-col items-center space-y-2">
-      <h1 class="text-4xl font-bold">{frontmatter.title}</h1>
-      <p class="italic text-skin-muted">{frontmatter.description}</p>
-    </section>
+    <Heading title={frontmatter.title} description={frontmatter.description} />
     <section>
       <slot />
     </section>

@@ -4,7 +4,7 @@ import { Icon } from "astro-icon";
 const allPosts = await Astro.glob("./*.md");
 ---
 
-<PageLayout title="Blog" description="My personal blog">
+<PageLayout title="Blog" description="My personal blog" activeNav="blog">
   <ul class="">
     {
       allPosts.map((post) => {
