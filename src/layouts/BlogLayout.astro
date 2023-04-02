@@ -8,8 +8,10 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title} activeNav="blog">
   <main class="mx-auto max-w-screen-sm space-y-10 px-4 py-10 sm:px-0">
     <Heading title={frontmatter.title} description={frontmatter.description} />
-    <section>
+    <article
+      class="prose prose-headings:text-skin-emphasis prose-p:text-skin-base prose-a:text-skin-accent hover:prose-a:text-skin-accent-hover"
+    >
       <slot />
-    </section>
+    </article>
   </main>
 </Layout>
