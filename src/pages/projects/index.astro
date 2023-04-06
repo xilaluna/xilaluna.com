@@ -1,26 +1,14 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 
-const projects = [
-  {
-    title: "BoringStocks",
-    description:
-      "A minimalistic stock information website for the average trader.",
-    link: "https://github.com/BoringStocks/BoringStocks",
-  },
-  {
-    title: "Fentanyl Epidemic Tracker",
-    description:
-      "A Go scraper that pulls fentanyl articles to follow the fentanyl epidemic trend",
-    link: "https://github.com/xilaluna/fentanyl-epidemic-tracker",
-  },
-  {
-    title: "CoinStamp",
-    description:
-      "Use decentralized currencies to buy and print your postage today.",
-    link: "https://github.com/xilaluna/coinstamp",
-  },
-];
+type Project = {
+  title: string;
+  description: string;
+  link: string;
+};
+
+const response = await fetch("https://git-pinned-production.up.railway.app/");
+const projects = (await response.json()) as Project[];
 ---
 
 <PageLayout
