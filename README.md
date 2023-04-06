@@ -45,3 +45,8 @@ Run the project
 ```
 pnpm dev
 ```
+
+## License
+
+Licensed under the [MIT License](./LICENSE).
+If you use this project, please give me credit by linking back to [xilaluna.com](https://xilaluna.com).
