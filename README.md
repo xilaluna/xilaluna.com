@@ -2,19 +2,18 @@
 
 A minimalistic portfolio website that is easy to read and understand.
 
-## Visit my Portfolio
+## 📍 Visit my Portfolio
 
 Visit my portfolio at [xilaluna.com](https://xilaluna.com)!
 
-## Stack
+## 🥞 Stack
 
 - [Astro](https://astro.build/) - Super Fast Static Site Generator
-- [Typescript](https://www.typescriptlang.org/) - Language
-- [Phosphor Icons](https://phosphoricons.com/) - Clean Icons
-- [pnpm](https://pnpm.io/) - Package Manager
 - [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+- [pnpm](https://pnpm.io/) - Package Manager
+- [Phosphor Icons](https://phosphoricons.com/) - Clean Icons
 
-## Download for a Template and Run it Locally
+## 🧑‍💻 Download for a Template and Run it Locally
 
 First clone the repository
 
@@ -46,7 +45,7 @@ Run the project
 pnpm dev
 ```
 
-## License
+## 🪪 License
 
 Licensed under the [MIT License](./LICENSE).
 If you use this project, please give me credit by linking back to [xilaluna.com](https://xilaluna.com).
