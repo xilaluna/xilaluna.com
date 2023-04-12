@@ -5,11 +5,11 @@ const allPosts = await Astro.glob("./*.md");
 ---
 
 <PageLayout title="Blog" description="My personal blog" activeNav="blog">
-  <ul class="">
+  <ul class="space-y-5">
     {
       allPosts.map((post) => {
         return (
-          <li class="">
+          <li>
             <a href={post.url} class="inline-block">
               <h2 class="text-skin-accent text-lg hover:underline">
                 {post.frontmatter.title}
