@@ -2,12 +2,20 @@
 import PageLayout from "../../layouts/PageLayout.astro";
 import { Icon } from "astro-icon";
 const allPosts = await Astro.glob("./*.md");
+
+// Sort posts by date
+allPosts.sort(
+  (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+);
 ---
 
 <PageLayout title="Blog" description="My personal blog" activeNav="blog">
   <ul class="space-y-5">
     {
       allPosts.map((post) => {
+        const formattedDate = new Date(
+          post.frontmatter.date
+        ).toLocaleDateString("en-US");
         return (
           <li>
             <a href={post.url} class="inline-block">
@@ -20,7 +28,7 @@ const allPosts = await Astro.glob("./*.md");
                 name="ph:calendar-blank"
                 class="mb-0.5 inline-block h-5 w-5 align-middle"
               />
-              {post.frontmatter.date}
+              {formattedDate}
             </div>
             <p>{post.frontmatter.description}</p>
           </li>

@@ -1,6 +1,6 @@
 ---
 title: My MacOS Terminal Setup
-date: 12/6/2022
+date: 2022-12-6
 description: How I setup my terminal on every MacOS computer that I use.
 layout: ../../layouts/BlogLayout.astro
 ---

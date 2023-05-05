@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: 9/29/2022
+date: 2022-9-29
 description: A little bit about me and what I do.
 layout: ../../layouts/BlogLayout.astro
 ---
