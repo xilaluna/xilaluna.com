@@ -4,24 +4,30 @@
 
 @layer base {
   body {
-    @apply bg-skin-fill font-mono text-skin-base;
+    @apply bg-skin-base font-mono text-skin-base;
   }
   :root,
   html[data-theme="light"] {
-    --color-text-base: 38, 38, 38;
-    --color-accent: 244, 114, 182;
-    --color-accent-hover: 236, 72, 153;
-    --color-muted: 163, 163, 163;
-    --color-fill: 245, 245, 245;
-    --color-fill-inverse: 23, 23, 23;
+    --color-background: 245, 245, 245;
+    --color-background-inverse: 23, 23, 23;
+    --color-background-card: 229, 229, 229;
+    --color-text: 38, 38, 38;
+    --color-text-heading: 23, 23, 23;
+    --color-text-muted: 163, 163, 163;
+    --color-border: 163, 163, 163;
+    --color-highlight: 244, 114, 182;
+    --color-highlight-hover: 236, 72, 153;
   }
   html[data-theme="dark"] {
-    --color-text-base: 163, 163, 163;
-    --color-accent: 167, 139, 250;
-    --color-accent-hover: 168, 85, 247;
-    --color-muted: 82, 82, 82;
-    --color-fill: 23, 23, 23;
-    --color-fill-inverse: 245, 245, 245;
+    --color-background: 23, 23, 23;
+    --color-background-inverse: 245, 245, 245;
+    --color-background-card: 229, 229, 229;
+    --color-text: 163, 163, 163;
+    --color-text-heading: 245, 245, 245;
+    --color-text-muted: 82, 82, 82;
+    --color-border: 82, 82, 82;
+    --color-highlight: 167, 139, 250;
+    --color-highlight-hover: 168, 85, 247;
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {

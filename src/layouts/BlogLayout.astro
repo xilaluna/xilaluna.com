@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   <main class="mx-auto max-w-screen-sm space-y-10 px-4 py-10 sm:px-0">
     <Heading title={frontmatter.title} description={frontmatter.description} />
     <article
-      class="prose prose-headings:text-skin-emphasis prose-p:text-skin-base prose-a:text-skin-accent hover:prose-a:text-skin-accent-hover"
+      class="prose prose-headings:text-skin-heading prose-p:text-skin-base prose-a:text-skin-highlight hover:prose-a:text-skin-highlight-hover"
     >
       <slot />
     </article>

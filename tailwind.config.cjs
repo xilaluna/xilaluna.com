@@ -19,27 +19,28 @@ module.exports = {
     extend: {
       textColor: {
         skin: {
-          base: withOpacity("--color-text-base"),
-          emphasis: withOpacity("--color-fill-inverse"),
-          accent: withOpacity("--color-accent"),
-          "accent-hover": withOpacity("--color-accent-hover"),
-          muted: withOpacity("--color-muted"),
-          inverted: withOpacity("--color-fill"),
+          base: withOpacity("--color-text"),
+          heading: withOpacity("--color-text-heading"),
+          muted: withOpacity("--color-text-muted"),
+          inverted: withOpacity("--color-background"),
+          highlight: withOpacity("--color-highlight"),
+          "highlight-hover": withOpacity("--color-highlight-hover"),
         },
       },
       backgroundColor: {
         skin: {
-          fill: withOpacity("--color-fill"),
-          accent: withOpacity("--color-accent"),
-          "accent-hover": withOpacity("--color-accent-hover"),
-          inverted: withOpacity("--color-fill-inverse"),
+          base: withOpacity("--color-background"),
+          inverted: withOpacity("--color-background-inverse"),
+          card: withOpacity("--color-background-card"),
+          highlight: withOpacity("--color-highlight"),
+          "highlight-hover": withOpacity("--color-highlight-hover"),
         },
       },
       borderColor: {
         skin: {
-          base: withOpacity("--color-muted"),
-          accent: withOpacity("--color-accent"),
-          "accent-hover": withOpacity("--color-accent-hover"),
+          base: withOpacity("--color-border"),
+          highlight: withOpacity("--color-highlight"),
+          "highlight-hover": withOpacity("--color-highlight-hover"),
         },
       },
     },

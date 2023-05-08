@@ -12,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
         alt="main picture"
         class="h-64 w-64 rounded-full"
       />
-      <h1 class="text-5xl font-bold text-skin-emphasis">Xila Luna</h1>
+      <h1 class="text-5xl font-bold text-skin-heading">Xila Luna</h1>
       <p class="text-center">
         Xila Luna is a creative full-stack engineer who is willing and able to
         find solutions when there are none.
@@ -20,12 +20,12 @@ import Layout from "../layouts/Layout.astro";
       <div>
         <a
           href="/links/"
-          class="rounded bg-skin-accent p-2 text-skin-inverted hover:bg-skin-accent-hover"
+          class="rounded bg-skin-highlight p-2 text-skin-inverted hover:bg-skin-highlight-hover"
           >Contact Me</a
         >
         <a
           href="/blog/hello-world/"
-          class="rounded border border-skin-accent p-2 text-skin-accent hover:border-skin-accent-hover hover:text-skin-accent-hover"
+          class="rounded border border-skin-highlight p-2 text-skin-highlight hover:border-skin-highlight-hover hover:text-skin-highlight-hover"
           >About Me</a
         >
       </div>
@@ -42,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
         <!-- 2022 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold text-skin-emphasis">2022</h3>
+            <h3 class="font-semibold text-skin-heading">2022</h3>
           </div>
           <div class="space-y-2">
             <p>
@@ -74,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
         <!-- 2020 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold text-skin-emphasis">2020</h3>
+            <h3 class="font-semibold text-skin-heading">2020</h3>
           </div>
           <div class="space-y-2">
             <p>Graduated from Berkeley High School</p>
@@ -94,7 +94,7 @@ import Layout from "../layouts/Layout.astro";
         <!-- 2019 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold text-skin-emphasis">2019</h3>
+            <h3 class="font-semibold text-skin-heading">2019</h3>
           </div>
           <div class="space-y-2">
             <p>
@@ -108,7 +108,7 @@ import Layout from "../layouts/Layout.astro";
         <!-- 2018 -->
         <div class="flex gap-5">
           <div>
-            <h3 class="font-semibold text-skin-emphasis">2018</h3>
+            <h3 class="font-semibold text-skin-heading">2018</h3>
           </div>
           <div class="space-y-2">
             <p>Wrote my first line of code</p>
@@ -128,7 +128,7 @@ import Layout from "../layouts/Layout.astro";
             href="https://github.com/BoringStocks/BoringStocks"
             class="inline-block"
           >
-            <h2 class="text-lg text-skin-accent hover:underline">
+            <h2 class="text-lg text-skin-highlight hover:underline">
               BoringStocks
             </h2>
           </a>
@@ -138,7 +138,9 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li>
           <a href="https://github.com/xilaluna/git-pinned" class="inline-block">
-            <h2 class="text-lg text-skin-accent hover:underline">git-pinned</h2>
+            <h2 class="text-lg text-skin-highlight hover:underline">
+              git-pinned
+            </h2>
           </a>
           <p>
             A lightweight go scraper that scrapes github profiles for pinned
@@ -150,7 +152,7 @@ import Layout from "../layouts/Layout.astro";
             href="https://github.com/xilaluna/fentanyl-epidemic-tracker"
             class="inline-block"
           >
-            <h2 class="text-lg text-skin-accent hover:underline">
+            <h2 class="text-lg text-skin-highlight hover:underline">
               Fentanyl Epidemic Tracker
             </h2>
           </a>
@@ -160,7 +162,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </li>
       </ul>
-      <p class="text-center hover:text-skin-accent">
+      <p class="text-center hover:text-skin-highlight">
         <a href="/projects/"
           >All Projects <Icon
             name="ph:caret-right"
@@ -173,9 +175,9 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 <style>
   .secondary-heading {
-    @apply text-center text-2xl font-semibold tracking-wide text-skin-emphasis;
+    @apply text-center text-2xl font-semibold tracking-wide text-skin-heading;
   }
   .link {
-    @apply text-skin-accent hover:text-skin-accent-hover hover:underline;
+    @apply text-skin-highlight hover:text-skin-highlight-hover hover:underline;
   }
 </style>
