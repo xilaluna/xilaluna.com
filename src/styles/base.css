@@ -37,4 +37,8 @@
   html[data-theme="dark"] #sun-svg {
     display: block;
   }
+
+  code {
+    @apply rounded-sm bg-gray-300 p-1;
+  }
 }

@@ -1,11 +1,11 @@
 ---
 title: My MacOS Terminal Setup
-date: 2022-12-6
+date: 2023-8-6
 description: How I setup my terminal on every MacOS computer that I use.
 layout: ../../layouts/BlogLayout.astro
 ---
 
-![main-thumbnail-blog-post-2.png](main-thumbnail-blog-post-2.png)
+![main-thumbnail-blog-post-2.png](/images/blog/main-thumbnail-blog-post-2.png)
 
 The terminal is one of the most important tools in a developers toolbox. It gives the power to do many things. This is why I put very careful thought into how my terminal is set up. I will show you step by step how to set up a very fast and elegant terminal that can get the job done.
 
@@ -47,7 +47,7 @@ While iTerm is great for making your terminal look colorful, it should be known 
 
 ## Oh My Zsh
 
-The next step on our list is to install OhMyZsh which is a framework that gives the user the ability to quickly install a whole lot of different plugins, and themes. This is going to be crucial for terminal setup.
+The next step on our list is to install OhMyZsh which is a framework that gives the user the ability to quickly install a whole lot of different plugins, and themes. This is going to be crucial for our terminal setup.
 
 We can install ohmyzsh by running this curl command.
 
@@ -59,7 +59,7 @@ You can read more about all the possibilities and the awesome community behind o
 
 ## Powerlevel10K
 
-As you can see our terminal is changing bit by bit. The next add will take it one step further. Powerlevel10K is a theme that is added into OhMyZsh which adds icons and complete customization of the command line.
+As you can see our terminal is changing bit by bit. The next addition will take it one step further. Powerlevel10K is a theme that is added into OhMyZsh. Powerlevel10K adds icons and complete customization of the command line.
 
 To install Powerlevel10K we need to clone the github repo and set it into our zsh profile. The line below will clone the repo.
 
@@ -77,7 +77,7 @@ Once we are inside our zsh rc file we can then replace the theme inside there wi
 
 ![zshrcfilething.png](/images/blog/zshrcfilething.png)
 
-After this is done all that you have to do is enter the `p10k configure` command and your done. You know have a super personalized terminal.
+After this is done all that you have to do is enter the `p10k configure` command and your done. You now have a super personalized terminal.
 
 ## Conclusion
 
